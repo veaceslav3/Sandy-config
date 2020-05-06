@@ -225,7 +225,9 @@
 					},
 					"sample": {
 						"method": "SUBSCRIBE",
-						"params": "btcusdt@aggTrade",
+						"params": [
+							"btcusdt@aggTrade"
+						],
 						"id": 2
 					}
 				}
@@ -260,7 +262,9 @@
 					},
 					"sample": {
 						"method": "UNSUBSCRIBE",
-						"params": "btcusdt@aggTrade",
+						"params": [
+							"btcusdt@aggTrade"
+						],
 						"id": 4
 					}
 				}
@@ -313,6 +317,82 @@
 							"combined"
 						],
 						"id": 7
+					}
+				}
+			},
+			
+			
+			{
+				"group": "Trade Streams",
+				"methodName": "Subscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "SUBSCRIBE",
+						"params": [
+							"btcusdt@310265085"
+						],
+						"id": 8
+					}
+				}
+			},
+			{
+				"group": "Trade Streams",
+				"methodName": "Unsubscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "UNSUBSCRIBE",
+						"params": [
+							"btcusdt@310265085"
+						],
+						"id": 9
+					}
+				}
+			},
+			
+			
+			{
+				"group": "Kline/Candlestick Streams",
+				"methodName": "Subscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "SUBSCRIBE",
+						"params": [
+							"btcusdt@kline_2000ms"
+						],
+						"id": 10
+					}
+				}
+			},
+			{
+				"group": "Kline/Candlestick Streams",
+				"methodName": "Unsubscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "UNSUBSCRIBE",
+						"params": [
+							"btcusdt@kline_2000ms"
+						],
+						"id": 11
 					}
 				}
 			}
