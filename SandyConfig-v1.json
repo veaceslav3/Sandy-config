@@ -212,7 +212,7 @@
 						],
 						"id": 1
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values (as list)",
 						"comment2": "Make ID as random generated"
 					}
@@ -232,7 +232,7 @@
 						"params": "btcusdt@aggTrade",
 						"id": 2
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values (as single value)",
 						"comment2": "Make ID as random generated"
 					}
@@ -255,7 +255,7 @@
 						],
 						"id": 3
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values (as list)",
 						"comment2": "Make ID as random generated"
 					}
@@ -275,7 +275,7 @@
 						"params": "btcusdt@aggTrade",
 						"id": 4
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values (as single value)",
 						"comment2": "Make ID as random generated"
 					}
@@ -293,7 +293,7 @@
 						"method": "LIST_SUBSCRIPTIONS",
 						"id": 5
 					},
-					"metadata": {
+					"metadata1": {
 						"comment2": "Make ID as random generated"
 					}
 				}
@@ -315,7 +315,7 @@
 						],
 						"id": 6
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values",
 						"comment2": "Make ID as random generated"
 					}
@@ -337,7 +337,7 @@
 						],
 						"id": 7
 					},
-					"metadata": {
+					"metadata1": {
 						"comment2": "Make ID as random generated"
 					}
 				}
@@ -366,7 +366,7 @@
 						],
 						"id": 1
 					},
-					"metadata": {
+					"metadata1": {
 						"comment1": "Add more param values (as list)",
 						"comment2": "Make ID as random generated"
 					}
