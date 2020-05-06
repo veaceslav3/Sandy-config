@@ -190,7 +190,7 @@
 			}
 		]
 	},
-	"Combined streams": {
+	"SUBSCRIBE": {
 		"url": "wss://stream.binance.com/stream",
 		"provider": "websocket",
 		"order": 1,
@@ -206,7 +206,7 @@
 					},
 					"sample": {
 						"method": "LIST_SUBSCRIPTIONS",
-						"id": 5
+						"id": 1
 					}
 				}
 			},
@@ -225,7 +225,30 @@
 							"combined",
 							true
 						],
-						"id": 6
+						"id": 2
+					},
+					"metadata": {
+							"params": {
+								"id": "params",
+								"label": "params",
+								"type": "select",
+								"data": [
+									{["btcusdt@aggTrade", "btcusdt@depth"]},
+									{["btcusdt@trade"]},
+									{["btcusdt@miniTicker", "!miniTicker@arr", "btcusdt@ticker"]}
+								],
+								"initialValue": "btcusdt@depth",
+								"required": true,
+								"valueType": "text"
+							}
+						"id": {
+							"id": "id",
+							"label": "id",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						}
 					}
 				}
 			},
@@ -243,7 +266,44 @@
 						"params": [
 							"combined"
 						],
-						"id": 7
+						"id": 3
+					}
+				}
+			},
+			
+			{
+				"group": "Aggregated Trade Streams",
+				"methodName": "Subscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "SUBSCRIBE",
+						"params": [
+							"btcusdt@aggTrade"
+						],
+						"id": 4
+					}
+				}
+			},
+			{
+				"group": "Aggregated Trade Streams",
+				"methodName": "Unsubscribe",
+				"payload": {
+					"structure": {
+						"method": "method",
+						"params": "params",
+						"id": "id"
+					},
+					"sample": {
+						"method": "UNSUBSCRIBE",
+						"params": [
+							"btcusdt@aggTrade"
+						],
+						"id": 5
 					}
 				}
 			},
@@ -261,7 +321,7 @@
 					"sample": {
 						"method": "SUBSCRIBE",
 						"params": [
-							"btcusdt@310265085"
+							"btcusdt@trade"
 						],
 						"id": 8
 					}
@@ -279,7 +339,7 @@
 					"sample": {
 						"method": "UNSUBSCRIBE",
 						"params": [
-							"btcusdt@310265085"
+							"btcusdt@trade"
 						],
 						"id": 9
 					}
@@ -299,7 +359,7 @@
 					"sample": {
 						"method": "SUBSCRIBE",
 						"params": [
-							"btcusdt@kline_2000ms"
+							"btcusdt@kline_1m"
 						],
 						"id": 10
 					}
@@ -317,7 +377,7 @@
 					"sample": {
 						"method": "UNSUBSCRIBE",
 						"params": [
-							"btcusdt@kline_2000ms"
+							"btcusdt@kline_1m"
 						],
 						"id": 11
 					}
@@ -702,29 +762,19 @@
 		]
 	},
 	"Raw streams": {
-		"url": "wss://stream.binance.com/ws",
+		"url": "wss://stream.binance.com/ws/btcusdt@aggTrade",
 		"provider": "websocket",
 		"order": 3,
 		"methods": [
-			{
-				"group": "Subscribe/Unsubscribe",
-				"methodName": "Subscribe to many streams",
-				"payload": {
-					"structure": {
-						"method": "method",
-						"params": "params",
-						"id": "id"
-					},
-					"sample": {
-						"method": "SUBSCRIBE",
-						"params": [
-							"btcusdt@aggTrade",
-							"btcusdt@depth"
-						],
-						"id": 1
-					}
-				}
-			}
+			
+		]
+	}
+	"Combined streams 2": {
+		"url": "wss://stream.binance.com/stream?streams=btcusdt@aggTrade/arkbtc@aggTrade",
+		"provider": "websocket",
+		"order": 3,
+		"methods": [
+			
 		]
 	}
 }
