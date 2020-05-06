@@ -226,41 +226,6 @@
 							true
 						],
 						"id": 2
-					},
-					"metadata": {
-						"method": {
-							"id": "method",
-							"label": "method",
-							"type": "select",
-							"data": [
-								"SUBSCRIBE",
-								"UNSUBSCRIBE"
-							],
-							"initialValue": "SUBSCRIBE",
-							"required": true,
-							"valueType": "text"
-						},
-						"params": {
-							"id": "params",
-							"label": "params",
-							"type": "select",
-							"data": [
-								""["btcusdt@aggTrade", "btcusdt@depth"]}"",
-								""["btcusdt@trade"]"",
-								""["btcusdt@miniTicker", "!miniTicker@arr", "btcusdt@ticker"]""
-							],
-							"initialValue": "btcusdt@depth",
-							"required": true,
-							"valueType": "text"
-						}
-						"id": {
-							"id": "id",
-							"label": "id",
-							"type": "input",
-							"initialValue": 1,
-							"required": true,
-							"valueType": "number"
-						}
 					}
 				}
 			},
