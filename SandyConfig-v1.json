@@ -4,7 +4,6 @@
 		"provider": "websocket",
 		"order": 1,
 		"methods": [
-			
 			{
 				"group": "General",
 				"methodName": "Listing Subscriptions",
@@ -35,6 +34,41 @@
 							true
 						],
 						"id": 2
+					},
+					"metadata": {
+						"method": {
+							"id": "method",
+							"label": "method",
+							"type": "select",
+							"data": [
+								"SUBSCRIBE",
+								"UNSUBSCRIBE"
+							],
+							"initialValue": "SUBSCRIBE",
+							"required": true,
+							"valueType": "text"
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"[\"btcusdt@aggTrade\", \"btcusdt@depth\"]",
+								"[\"btcusdt@trade\"]",
+								"[\"btcusdt@miniTicker\", \"!miniTicker@arr\", \"btcusdt@ticker\"]"
+							],
+							"initialValue": "btcusdt@depth",
+							"required": true,
+							"valueType": "text"
+						},
+						"id": {
+							"id": "id",
+							"label": "id",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						}
 					}
 				}
 			},
@@ -56,7 +90,6 @@
 					}
 				}
 			},
-			
 			{
 				"group": "Aggregated Trade Streams",
 				"methodName": "Subscribe",
@@ -93,8 +126,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Trade Streams",
 				"methodName": "Subscribe",
@@ -131,8 +162,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Kline/Candlestick Streams",
 				"methodName": "Subscribe",
@@ -169,8 +198,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Individual Symbol Mini Ticker Stream",
 				"methodName": "Subscribe",
@@ -207,8 +234,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "All Market Mini Tickers Stream",
 				"methodName": "Subscribe",
@@ -245,8 +270,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Individual Symbol Ticker Streams",
 				"methodName": "Subscribe",
@@ -283,8 +306,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "All Market Tickers Stream",
 				"methodName": "Subscribe",
@@ -321,8 +342,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Individual Symbol Book Ticker Streams",
 				"methodName": "Subscribe",
@@ -359,8 +378,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "All Book Tickers Stream",
 				"methodName": "Subscribe",
@@ -397,8 +414,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Partial Book Depth Streams",
 				"methodName": "Subscribe",
@@ -471,8 +486,6 @@
 					}
 				}
 			},
-			
-			
 			{
 				"group": "Diff. Depth Stream",
 				"methodName": "Subscribe",
@@ -551,16 +564,12 @@
 		"url": "wss://stream.binance.com/ws/btcusdt@aggTrade",
 		"provider": "websocket",
 		"order": 3,
-		"methods": [
-			
-		]
+		"methods": []
 	},
 	"Combined streams 2": {
 		"url": "wss://stream.binance.com/stream?streams=btcusdt@aggTrade/arkbtc@aggTrade",
 		"provider": "websocket",
 		"order": 4,
-		"methods": [
-			
-		]
+		"methods": []
 	}
 }
