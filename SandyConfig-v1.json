@@ -347,6 +347,6 @@
 	"Raw streams": {
 		"url": "wss://stream.binance.com/ws",
 		"provider": "websocket",
-		"order": 2,
+		"order": 3,
 	}
 }
