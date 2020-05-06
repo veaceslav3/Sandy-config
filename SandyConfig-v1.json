@@ -211,6 +211,10 @@
 							"btcusdt@depth"
 						],
 						"id": 1
+					},
+					"comments": {
+						"comment1": "Add more param values (as list)",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -227,6 +231,10 @@
 						"method": "SUBSCRIBE",
 						"params": "btcusdt@aggTrade",
 						"id": 2
+					},
+					"comments": {
+						"comment1": "Add more param values (as single value)",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -246,6 +254,10 @@
 							"btcusdt@depth"
 						],
 						"id": 3
+					},
+					"comments": {
+						"comment1": "Add more param values (as list)",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -262,6 +274,10 @@
 						"method": "UNSUBSCRIBE",
 						"params": "btcusdt@aggTrade",
 						"id": 4
+					},
+					"comments": {
+						"comment1": "Add more param values (as single value)",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -276,6 +292,9 @@
 					"sample": {
 						"method": "LIST_SUBSCRIPTIONS",
 						"id": 5
+					},
+					"comments": {
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -295,6 +314,10 @@
 							true
 						],
 						"id": 6
+					},
+					"comments": {
+						"comment1": "Add more param values",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			},
@@ -313,6 +336,9 @@
 							"combined"
 						],
 						"id": 7
+					},
+					"comments": {
+						"comment2": "Make ID as random generated"
 					}
 				}
 			}
@@ -339,6 +365,10 @@
 							"btcusdt@depth"
 						],
 						"id": 1
+					},
+					"comments": {
+						"comment1": "Add more param values (as list)",
+						"comment2": "Make ID as random generated"
 					}
 				}
 			}
