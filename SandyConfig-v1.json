@@ -195,82 +195,9 @@
 		"provider": "websocket",
 		"order": 1,
 		"methods": [
+			
 			{
-				"group": "Subscribe/Unsubscribe",
-				"methodName": "Subscribe to many streams",
-				"payload": {
-					"structure": {
-						"method": "method",
-						"params": "params",
-						"id": "id"
-					},
-					"sample": {
-						"method": "SUBSCRIBE",
-						"params": [
-							"btcusdt@aggTrade",
-							"btcusdt@depth"
-						],
-						"id": 1
-					}
-				}
-			},
-			{
-				"group": "Subscribe/Unsubscribe",
-				"methodName": "Subscribe to a stream",
-				"payload": {
-					"structure": {
-						"method": "method",
-						"params": "params",
-						"id": "id"
-					},
-					"sample": {
-						"method": "SUBSCRIBE",
-						"params": [
-							"btcusdt@aggTrade"
-						],
-						"id": 2
-					}
-				}
-			},
-			{
-				"group": "Subscribe/Unsubscribe",
-				"methodName": "Unsubscribe to many streams",
-				"payload": {
-					"structure": {
-						"method": "method",
-						"params": "params",
-						"id": "id"
-					},
-					"sample": {
-						"method": "UNSUBSCRIBE",
-						"params": [
-							"btcusdt@aggTrade",
-							"btcusdt@depth"
-						],
-						"id": 3
-					}
-				}
-			},
-			{
-				"group": "Subscribe/Unsubscribe",
-				"methodName": "Unsubscribe to a stream",
-				"payload": {
-					"structure": {
-						"method": "method",
-						"params": "params",
-						"id": "id"
-					},
-					"sample": {
-						"method": "UNSUBSCRIBE",
-						"params": [
-							"btcusdt@aggTrade"
-						],
-						"id": 4
-					}
-				}
-			},
-			{
-				"group": "Subscribe/Unsubscribe",
+				"group": "General",
 				"methodName": "Listing Subscriptions",
 				"payload": {
 					"structure": {
@@ -284,7 +211,7 @@
 				}
 			},
 			{
-				"group": "Subscribe/Unsubscribe",
+				"group": "General",
 				"methodName": "Setting Properties",
 				"payload": {
 					"structure": {
@@ -303,7 +230,7 @@
 				}
 			},
 			{
-				"group": "Subscribe/Unsubscribe",
+				"group": "General",
 				"methodName": "Retrieving Properties",
 				"payload": {
 					"structure": {
