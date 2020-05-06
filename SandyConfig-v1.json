@@ -2,7 +2,7 @@
 	"Test10": {
 		"url": "wss://stream.binance.com/stream",
 		"provider": "websocket",
-		"order": 1,
+		"order": 10,
 		"methods": [
 			{
 				"group": "Market Stream",
@@ -193,7 +193,7 @@
 	"Combined streams": {
 		"url": "wss://stream.binance.com/stream",
 		"provider": "websocket",
-		"order": 2,
+		"order": 1,
 		"methods": [
 			{
 				"group": "Subscribe/Unsubscribe",
