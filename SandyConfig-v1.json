@@ -554,7 +554,7 @@
 		"methods": [
 			
 		]
-	}
+	},
 	"Combined streams 2": {
 		"url": "wss://stream.binance.com/stream?streams=btcusdt@aggTrade/arkbtc@aggTrade",
 		"provider": "websocket",
