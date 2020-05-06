@@ -53,13 +53,22 @@
 							"label": "params",
 							"type": "select",
 							"data": [
-								"[\"btcusdt@aggTrade\", \"btcusdt@depth\"]",
-								"[\"btcusdt@trade\"]",
-								"[\"btcusdt@miniTicker\", \"!miniTicker@arr\", \"btcusdt@ticker\"]"
+								[
+									"btcusdt@aggTrade",
+									"btcusdt@depth"
+								],
+								[
+									"btcusdt@trade"
+								],
+								[
+									"btcusdt@miniTicker",
+									"!miniTicker@arr",
+									"btcusdt@ticker"
+								]
 							],
 							"initialValue": "btcusdt@depth",
 							"required": true,
-							"valueType": "text"
+							"valueType": "list"
 						},
 						"id": {
 							"id": "id",
