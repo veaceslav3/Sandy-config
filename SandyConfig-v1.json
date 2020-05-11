@@ -53,8 +53,7 @@
 							"label": "params",
 							"type": "select",
 							"data":[ 
-									"btcusdt@aggTrade",
-									"btcusdt@depth"
+									"btcusdt@aggTrade"
 							],
 							"initialValue": "btcusdt@depth",
 							"required": true,
