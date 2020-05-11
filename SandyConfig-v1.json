@@ -55,7 +55,7 @@
 							"data":[ 
 									"btcusdt@aggTrade",
 									"btcusdt@depth"
-							]							],
+							],
 							"initialValue": "btcusdt@depth",
 							"required": true,
 							"valueType": "list"
