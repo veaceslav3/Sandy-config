@@ -52,20 +52,10 @@
 							"id": "params",
 							"label": "params",
 							"type": "select",
-							"data": [
-								[
+							"data":[ 
 									"btcusdt@aggTrade",
 									"btcusdt@depth"
-								],
-								[
-									"btcusdt@trade"
-								],
-								[
-									"btcusdt@miniTicker",
-									"!miniTicker@arr",
-									"btcusdt@ticker"
-								]
-							],
+							]							],
 							"initialValue": "btcusdt@depth",
 							"required": true,
 							"valueType": "list"
