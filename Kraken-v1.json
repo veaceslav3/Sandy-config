@@ -1,0 +1,554 @@
+{
+	"Kraken-beta": {
+		"url": "wss://beta-ws.kraken.com",
+		"provider": "websocket",
+		"order": 6,
+		"methods": [
+			{
+				"group": "General",
+				"methodName": "Ping",
+				"payload": {
+					"sample": {
+						"event": "ping",
+						"reqid": 42
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "Event",
+							"type": "select",
+							"data": [
+								"ping"
+							],
+							"initialValue": "ping",
+							"required": true,
+							"valueType": "text"
+						},
+						"reqid": {
+							"id": "reqid",
+							"label": "Request id",
+							"type": "input",
+							"initialValue": 42,
+							"required": true,
+							"valueType": "number"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Subscribe-all",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "ticker"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Unsubscribe-all",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "ticker"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Subscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ticker"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Unsubscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ticker"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "ticker"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "ticker"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Subscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ohlc"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Unsubscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ohlc"
+						}
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "ohlc"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "ohlc"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Subscribe-onePair-interval",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ohlc",
+							"interval": 1
+						}
+					}
+				}
+			},
+			{
+				"group": "Ohlc",
+				"methodName": "Unsubscribe-onePair-interval",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ohlc",
+							"interval": 1
+						}
+					}
+				}
+			},
+			{
+				"group": "Trade",
+				"methodName": "Subscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "trade"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trade",
+				"methodName": "Unsubscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "trade"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trade",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "trade"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Trade",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "trade"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Subscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "book"
+						}
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Unsubscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "book"
+						}
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "book"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "book"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Subscribe-onePair-depth",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "book",
+							"depth": 10
+						}
+					}
+				}
+			},
+			{
+				"group": "Book",
+				"methodName": "Unsubscribe-onePair-depth",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "book",
+							"depth": 10
+						}
+					}
+				}
+			},
+			{
+				"group": "Spread",
+				"methodName": "Subscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "spread"
+						}
+					}
+				}
+			},
+			{
+				"group": "Spread",
+				"methodName": "Unsubscribe-onePair",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "spread"
+						}
+					}
+				}
+			},
+			{
+				"group": "Spread",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "spread"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Spread",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "spread"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "All channels",
+				"methodName": "Subscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "*"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "All channels",
+				"methodName": "Unsubscribe-manyPairs",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "*"
+						},
+						"pair": [
+							"XBT/USD",
+							"XBT/EUR"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Subscribe-onePair-reqid",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ticker"
+						},
+						"reqid": 14
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "Unsubscribe-onePair-reqid",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"pair": [
+							"XBT/USD"
+						],
+						"subscription": {
+							"name": "ticker"
+						},
+						"reqid": 14
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "Subscribe-OwnTrades",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "ownTrades",
+							"token": "WW91ciBhdXRoZW50aWNhdGlvbiB0b2tlbiBnb2VzIGhlcmUu"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "Unsubscribe-OwnTrades",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "ownTrades",
+							"token": "WW91ciBhdXRoZW50aWNhdGlvbiB0b2tlbiBnb2VzIGhlcmUu"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "Subscribe-OpenOrders",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"subscription": {
+							"name": "openOrders",
+							"token": "WW91ciBhdXRoZW50aWNhdGlvbiB0b2tlbiBnb2VzIGhlcmUu"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "Unsubscribe-OpenOrders",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"subscription": {
+							"name": "openOrders",
+							"token": "WW91ciBhdXRoZW50aWNhdGlvbiB0b2tlbiBnb2VzIGhlcmUu"
+						}
+					}
+				}
+			}
+		]
+	}
+}
