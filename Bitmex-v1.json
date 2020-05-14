@@ -1,0 +1,2089 @@
+{
+	"Bitmex": {
+		"url": "wss://www.bitmex.com/realtime",
+		"provider": "websocket",
+		"order": 8,
+		"methods": [
+			{
+				"group": "Private",
+				"methodName": "DeadMan'sSwitch",
+				"payload": {
+					"sample": {
+						"op": "cancelAllAfter",
+						"args": 60000
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "CancelSwitch",
+				"payload": {
+					"sample": {
+						"op": "cancelAllAfter",
+						"args": 0
+					}
+				}
+			},
+			{
+				"group": "General",
+				"methodName": "Announcement",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "announcement"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "announcement",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General",
+				"methodName": "Connected",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "connected"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "connected",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General",
+				"methodName": "Insurance",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "insurance"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "insurance",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General",
+				"methodName": "PublicNotifications",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "publicNotifications"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "publicNotifications",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General with filters",
+				"methodName": "chat",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "chat"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"chat",
+								"chat:1",
+								"chat:2",
+								"chat:3",
+								"chat:4"
+							],
+							"initialValue": "chat",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General with filters",
+				"methodName": "funding",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "funding"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"funding",
+								"funding:XBTUSD",
+								"funding:XBTM20",
+								"funding:XBTU20",
+								"funding:ETHUSD",
+								"funding:ETHM20",
+								"funding:ETHUSDM20",
+								"funding:LTCM20",
+								"funding:.EVOL7D",
+								"funding:.BADAXBT",
+								"funding:.BADAXBT30M",
+								"funding:.BBCHXBT",
+								"funding:.BBCHXBT30M",
+								"funding:.BEOSXBT",
+								"funding:.BEOSXBT30M",
+								"funding:.BXRPXBT",
+								"funding:.BXRPXBT30M",
+								"funding:.BTRXXBT",
+								"funding:.BTRXXBT30M",
+								"funding:.BADAXBT_NEXT",
+								"funding:.BBCHXBT_NEXT",
+								"funding:.BEOSXBT_NEXT",
+								"funding:.BTRXXBT_NEXT",
+								"funding:.BXRPXBT_NEXT",
+								"funding:.BXRP_NEXT",
+								"funding:.BXRP",
+								"funding:.XRPBON",
+								"funding:.XRPBON2H",
+								"funding:.XRPBON8H",
+								"funding:.XRPUSDPI",
+								"funding:.XRPUSDPI2H",
+								"funding:.XRPUSDPI8H",
+								"funding:XRPM20",
+								"funding:BCHM20",
+								"funding:ADAM20",
+								"funding:EOSM20",
+								"funding:TRXM20",
+								"funding:XRPUSD",
+								"funding:.XBT",
+								"funding:.XBT30M",
+								"funding:.XBTBON",
+								"funding:.XBTBON8H",
+								"funding:.XBTUSDPI",
+								"funding:.XBTUSDPI8H",
+								"funding:.XBTBON2H",
+								"funding:.XBTUSDPI2H",
+								"funding:.BXBT",
+								"funding:.BXBT30M",
+								"funding:.BXBT_NEXT",
+								"funding:.BVOL",
+								"funding:.BVOL24H",
+								"funding:.BVOL7D",
+								"funding:.ETHBON",
+								"funding:.ETHBON2H",
+								"funding:.ETHBON8H",
+								"funding:.ETHUSDPI",
+								"funding:.ETHUSDPI2H",
+								"funding:.ETHUSDPI8H",
+								"funding:.BETH",
+								"funding:.BETH30M",
+								"funding:.BETHXBT",
+								"funding:.BETHXBT30M",
+								"funding:.BETH_NEXT",
+								"funding:.BETHXBT_NEXT",
+								"funding:.BLTCXBT",
+								"funding:.BLTCXBT30M",
+								"funding:.BLTCXBT_NEXT",
+								"funding:.USDBON",
+								"funding:.USDBON8H",
+								"funding:.USDBON2H"
+							],
+							"initialValue": "funding",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "General with filters",
+				"methodName": "instrument",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "instrument"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"instrument",
+								"instrument:XBTUSD",
+								"instrument:XBTM20",
+								"instrument:XBTU20",
+								"instrument:ETHUSD",
+								"instrument:ETHM20",
+								"instrument:ETHUSDM20",
+								"instrument:LTCM20",
+								"instrument:.EVOL7D",
+								"instrument:.BADAXBT",
+								"instrument:.BADAXBT30M",
+								"instrument:.BBCHXBT",
+								"instrument:.BBCHXBT30M",
+								"instrument:.BEOSXBT",
+								"instrument:.BEOSXBT30M",
+								"instrument:.BXRPXBT",
+								"instrument:.BXRPXBT30M",
+								"instrument:.BTRXXBT",
+								"instrument:.BTRXXBT30M",
+								"instrument:.BADAXBT_NEXT",
+								"instrument:.BBCHXBT_NEXT",
+								"instrument:.BEOSXBT_NEXT",
+								"instrument:.BTRXXBT_NEXT",
+								"instrument:.BXRPXBT_NEXT",
+								"instrument:.BXRP_NEXT",
+								"instrument:.BXRP",
+								"instrument:.XRPBON",
+								"instrument:.XRPBON2H",
+								"instrument:.XRPBON8H",
+								"instrument:.XRPUSDPI",
+								"instrument:.XRPUSDPI2H",
+								"instrument:.XRPUSDPI8H",
+								"instrument:XRPM20",
+								"instrument:BCHM20",
+								"instrument:ADAM20",
+								"instrument:EOSM20",
+								"instrument:TRXM20",
+								"instrument:XRPUSD",
+								"instrument:.XBT",
+								"instrument:.XBT30M",
+								"instrument:.XBTBON",
+								"instrument:.XBTBON8H",
+								"instrument:.XBTUSDPI",
+								"instrument:.XBTUSDPI8H",
+								"instrument:.XBTBON2H",
+								"instrument:.XBTUSDPI2H",
+								"instrument:.BXBT",
+								"instrument:.BXBT30M",
+								"instrument:.BXBT_NEXT",
+								"instrument:.BVOL",
+								"instrument:.BVOL24H",
+								"instrument:.BVOL7D",
+								"instrument:.ETHBON",
+								"instrument:.ETHBON2H",
+								"instrument:.ETHBON8H",
+								"instrument:.ETHUSDPI",
+								"instrument:.ETHUSDPI2H",
+								"instrument:.ETHUSDPI8H",
+								"instrument:.BETH",
+								"instrument:.BETH30M",
+								"instrument:.BETHXBT",
+								"instrument:.BETHXBT30M",
+								"instrument:.BETH_NEXT",
+								"instrument:.BETHXBT_NEXT",
+								"instrument:.BLTCXBT",
+								"instrument:.BLTCXBT30M",
+								"instrument:.BLTCXBT_NEXT",
+								"instrument:.USDBON",
+								"instrument:.USDBON8H",
+								"instrument:.USDBON2H"
+							],
+							"initialValue": "instrument",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Order book",
+				"methodName": "liquidation",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "liquidation"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"liquidation",
+								"liquidation:XBTUSD",
+								"liquidation:XBTM20",
+								"liquidation:XBTU20",
+								"liquidation:ETHUSD",
+								"liquidation:ETHM20",
+								"liquidation:ETHUSDM20",
+								"liquidation:LTCM20",
+								"liquidation:.EVOL7D",
+								"liquidation:.BADAXBT",
+								"liquidation:.BADAXBT30M",
+								"liquidation:.BBCHXBT",
+								"liquidation:.BBCHXBT30M",
+								"liquidation:.BEOSXBT",
+								"liquidation:.BEOSXBT30M",
+								"liquidation:.BXRPXBT",
+								"liquidation:.BXRPXBT30M",
+								"liquidation:.BTRXXBT",
+								"liquidation:.BTRXXBT30M",
+								"liquidation:.BADAXBT_NEXT",
+								"liquidation:.BBCHXBT_NEXT",
+								"liquidation:.BEOSXBT_NEXT",
+								"liquidation:.BTRXXBT_NEXT",
+								"liquidation:.BXRPXBT_NEXT",
+								"liquidation:.BXRP_NEXT",
+								"liquidation:.BXRP",
+								"liquidation:.XRPBON",
+								"liquidation:.XRPBON2H",
+								"liquidation:.XRPBON8H",
+								"liquidation:.XRPUSDPI",
+								"liquidation:.XRPUSDPI2H",
+								"liquidation:.XRPUSDPI8H",
+								"liquidation:XRPM20",
+								"liquidation:BCHM20",
+								"liquidation:ADAM20",
+								"liquidation:EOSM20",
+								"liquidation:TRXM20",
+								"liquidation:XRPUSD",
+								"liquidation:.XBT",
+								"liquidation:.XBT30M",
+								"liquidation:.XBTBON",
+								"liquidation:.XBTBON8H",
+								"liquidation:.XBTUSDPI",
+								"liquidation:.XBTUSDPI8H",
+								"liquidation:.XBTBON2H",
+								"liquidation:.XBTUSDPI2H",
+								"liquidation:.BXBT",
+								"liquidation:.BXBT30M",
+								"liquidation:.BXBT_NEXT",
+								"liquidation:.BVOL",
+								"liquidation:.BVOL24H",
+								"liquidation:.BVOL7D",
+								"liquidation:.ETHBON",
+								"liquidation:.ETHBON2H",
+								"liquidation:.ETHBON8H",
+								"liquidation:.ETHUSDPI",
+								"liquidation:.ETHUSDPI2H",
+								"liquidation:.ETHUSDPI8H",
+								"liquidation:.BETH",
+								"liquidation:.BETH30M",
+								"liquidation:.BETHXBT",
+								"liquidation:.BETHXBT30M",
+								"liquidation:.BETH_NEXT",
+								"liquidation:.BETHXBT_NEXT",
+								"liquidation:.BLTCXBT",
+								"liquidation:.BLTCXBT30M",
+								"liquidation:.BLTCXBT_NEXT",
+								"liquidation:.USDBON",
+								"liquidation:.USDBON8H",
+								"liquidation:.USDBON2H"
+							],
+							"initialValue": "liquidation",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Order book",
+				"methodName": "orderBookL2_25",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "orderBookL2_25"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"orderBookL2_25",
+								"orderBookL2_25:XBTUSD",
+								"orderBookL2_25:XBTM20",
+								"orderBookL2_25:XBTU20",
+								"orderBookL2_25:ETHUSD",
+								"orderBookL2_25:ETHM20",
+								"orderBookL2_25:ETHUSDM20",
+								"orderBookL2_25:LTCM20",
+								"orderBookL2_25:.EVOL7D",
+								"orderBookL2_25:.BADAXBT",
+								"orderBookL2_25:.BADAXBT30M",
+								"orderBookL2_25:.BBCHXBT",
+								"orderBookL2_25:.BBCHXBT30M",
+								"orderBookL2_25:.BEOSXBT",
+								"orderBookL2_25:.BEOSXBT30M",
+								"orderBookL2_25:.BXRPXBT",
+								"orderBookL2_25:.BXRPXBT30M",
+								"orderBookL2_25:.BTRXXBT",
+								"orderBookL2_25:.BTRXXBT30M",
+								"orderBookL2_25:.BADAXBT_NEXT",
+								"orderBookL2_25:.BBCHXBT_NEXT",
+								"orderBookL2_25:.BEOSXBT_NEXT",
+								"orderBookL2_25:.BTRXXBT_NEXT",
+								"orderBookL2_25:.BXRPXBT_NEXT",
+								"orderBookL2_25:.BXRP_NEXT",
+								"orderBookL2_25:.BXRP",
+								"orderBookL2_25:.XRPBON",
+								"orderBookL2_25:.XRPBON2H",
+								"orderBookL2_25:.XRPBON8H",
+								"orderBookL2_25:.XRPUSDPI",
+								"orderBookL2_25:.XRPUSDPI2H",
+								"orderBookL2_25:.XRPUSDPI8H",
+								"orderBookL2_25:XRPM20",
+								"orderBookL2_25:BCHM20",
+								"orderBookL2_25:ADAM20",
+								"orderBookL2_25:EOSM20",
+								"orderBookL2_25:TRXM20",
+								"orderBookL2_25:XRPUSD",
+								"orderBookL2_25:.XBT",
+								"orderBookL2_25:.XBT30M",
+								"orderBookL2_25:.XBTBON",
+								"orderBookL2_25:.XBTBON8H",
+								"orderBookL2_25:.XBTUSDPI",
+								"orderBookL2_25:.XBTUSDPI8H",
+								"orderBookL2_25:.XBTBON2H",
+								"orderBookL2_25:.XBTUSDPI2H",
+								"orderBookL2_25:.BXBT",
+								"orderBookL2_25:.BXBT30M",
+								"orderBookL2_25:.BXBT_NEXT",
+								"orderBookL2_25:.BVOL",
+								"orderBookL2_25:.BVOL24H",
+								"orderBookL2_25:.BVOL7D",
+								"orderBookL2_25:.ETHBON",
+								"orderBookL2_25:.ETHBON2H",
+								"orderBookL2_25:.ETHBON8H",
+								"orderBookL2_25:.ETHUSDPI",
+								"orderBookL2_25:.ETHUSDPI2H",
+								"orderBookL2_25:.ETHUSDPI8H",
+								"orderBookL2_25:.BETH",
+								"orderBookL2_25:.BETH30M",
+								"orderBookL2_25:.BETHXBT",
+								"orderBookL2_25:.BETHXBT30M",
+								"orderBookL2_25:.BETH_NEXT",
+								"orderBookL2_25:.BETHXBT_NEXT",
+								"orderBookL2_25:.BLTCXBT",
+								"orderBookL2_25:.BLTCXBT30M",
+								"orderBookL2_25:.BLTCXBT_NEXT",
+								"orderBookL2_25:.USDBON",
+								"orderBookL2_25:.USDBON8H",
+								"orderBookL2_25:.USDBON2H"
+							],
+							"initialValue": "orderBookL2_25",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Order book",
+				"methodName": "orderBookL2",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "orderBookL2"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"orderBookL2",
+								"orderBookL2:XBTUSD",
+								"orderBookL2:XBTM20",
+								"orderBookL2:XBTU20",
+								"orderBookL2:ETHUSD",
+								"orderBookL2:ETHM20",
+								"orderBookL2:ETHUSDM20",
+								"orderBookL2:LTCM20",
+								"orderBookL2:.EVOL7D",
+								"orderBookL2:.BADAXBT",
+								"orderBookL2:.BADAXBT30M",
+								"orderBookL2:.BBCHXBT",
+								"orderBookL2:.BBCHXBT30M",
+								"orderBookL2:.BEOSXBT",
+								"orderBookL2:.BEOSXBT30M",
+								"orderBookL2:.BXRPXBT",
+								"orderBookL2:.BXRPXBT30M",
+								"orderBookL2:.BTRXXBT",
+								"orderBookL2:.BTRXXBT30M",
+								"orderBookL2:.BADAXBT_NEXT",
+								"orderBookL2:.BBCHXBT_NEXT",
+								"orderBookL2:.BEOSXBT_NEXT",
+								"orderBookL2:.BTRXXBT_NEXT",
+								"orderBookL2:.BXRPXBT_NEXT",
+								"orderBookL2:.BXRP_NEXT",
+								"orderBookL2:.BXRP",
+								"orderBookL2:.XRPBON",
+								"orderBookL2:.XRPBON2H",
+								"orderBookL2:.XRPBON8H",
+								"orderBookL2:.XRPUSDPI",
+								"orderBookL2:.XRPUSDPI2H",
+								"orderBookL2:.XRPUSDPI8H",
+								"orderBookL2:XRPM20",
+								"orderBookL2:BCHM20",
+								"orderBookL2:ADAM20",
+								"orderBookL2:EOSM20",
+								"orderBookL2:TRXM20",
+								"orderBookL2:XRPUSD",
+								"orderBookL2:.XBT",
+								"orderBookL2:.XBT30M",
+								"orderBookL2:.XBTBON",
+								"orderBookL2:.XBTBON8H",
+								"orderBookL2:.XBTUSDPI",
+								"orderBookL2:.XBTUSDPI8H",
+								"orderBookL2:.XBTBON2H",
+								"orderBookL2:.XBTUSDPI2H",
+								"orderBookL2:.BXBT",
+								"orderBookL2:.BXBT30M",
+								"orderBookL2:.BXBT_NEXT",
+								"orderBookL2:.BVOL",
+								"orderBookL2:.BVOL24H",
+								"orderBookL2:.BVOL7D",
+								"orderBookL2:.ETHBON",
+								"orderBookL2:.ETHBON2H",
+								"orderBookL2:.ETHBON8H",
+								"orderBookL2:.ETHUSDPI",
+								"orderBookL2:.ETHUSDPI2H",
+								"orderBookL2:.ETHUSDPI8H",
+								"orderBookL2:.BETH",
+								"orderBookL2:.BETH30M",
+								"orderBookL2:.BETHXBT",
+								"orderBookL2:.BETHXBT30M",
+								"orderBookL2:.BETH_NEXT",
+								"orderBookL2:.BETHXBT_NEXT",
+								"orderBookL2:.BLTCXBT",
+								"orderBookL2:.BLTCXBT30M",
+								"orderBookL2:.BLTCXBT_NEXT",
+								"orderBookL2:.USDBON",
+								"orderBookL2:.USDBON8H",
+								"orderBookL2:.USDBON2H"
+							],
+							"initialValue": "orderBookL2",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Order book",
+				"methodName": "orderBook10",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "orderBook10"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"orderBook10",
+								"orderBook10:XBTUSD",
+								"orderBook10:XBTM20",
+								"orderBook10:XBTU20",
+								"orderBook10:ETHUSD",
+								"orderBook10:ETHM20",
+								"orderBook10:ETHUSDM20",
+								"orderBook10:LTCM20",
+								"orderBook10:.EVOL7D",
+								"orderBook10:.BADAXBT",
+								"orderBook10:.BADAXBT30M",
+								"orderBook10:.BBCHXBT",
+								"orderBook10:.BBCHXBT30M",
+								"orderBook10:.BEOSXBT",
+								"orderBook10:.BEOSXBT30M",
+								"orderBook10:.BXRPXBT",
+								"orderBook10:.BXRPXBT30M",
+								"orderBook10:.BTRXXBT",
+								"orderBook10:.BTRXXBT30M",
+								"orderBook10:.BADAXBT_NEXT",
+								"orderBook10:.BBCHXBT_NEXT",
+								"orderBook10:.BEOSXBT_NEXT",
+								"orderBook10:.BTRXXBT_NEXT",
+								"orderBook10:.BXRPXBT_NEXT",
+								"orderBook10:.BXRP_NEXT",
+								"orderBook10:.BXRP",
+								"orderBook10:.XRPBON",
+								"orderBook10:.XRPBON2H",
+								"orderBook10:.XRPBON8H",
+								"orderBook10:.XRPUSDPI",
+								"orderBook10:.XRPUSDPI2H",
+								"orderBook10:.XRPUSDPI8H",
+								"orderBook10:XRPM20",
+								"orderBook10:BCHM20",
+								"orderBook10:ADAM20",
+								"orderBook10:EOSM20",
+								"orderBook10:TRXM20",
+								"orderBook10:XRPUSD",
+								"orderBook10:.XBT",
+								"orderBook10:.XBT30M",
+								"orderBook10:.XBTBON",
+								"orderBook10:.XBTBON8H",
+								"orderBook10:.XBTUSDPI",
+								"orderBook10:.XBTUSDPI8H",
+								"orderBook10:.XBTBON2H",
+								"orderBook10:.XBTUSDPI2H",
+								"orderBook10:.BXBT",
+								"orderBook10:.BXBT30M",
+								"orderBook10:.BXBT_NEXT",
+								"orderBook10:.BVOL",
+								"orderBook10:.BVOL24H",
+								"orderBook10:.BVOL7D",
+								"orderBook10:.ETHBON",
+								"orderBook10:.ETHBON2H",
+								"orderBook10:.ETHBON8H",
+								"orderBook10:.ETHUSDPI",
+								"orderBook10:.ETHUSDPI2H",
+								"orderBook10:.ETHUSDPI8H",
+								"orderBook10:.BETH",
+								"orderBook10:.BETH30M",
+								"orderBook10:.BETHXBT",
+								"orderBook10:.BETHXBT30M",
+								"orderBook10:.BETH_NEXT",
+								"orderBook10:.BETHXBT_NEXT",
+								"orderBook10:.BLTCXBT",
+								"orderBook10:.BLTCXBT30M",
+								"orderBook10:.BLTCXBT_NEXT",
+								"orderBook10:.USDBON",
+								"orderBook10:.USDBON8H",
+								"orderBook10:.USDBON2H"
+							],
+							"initialValue": "orderBook10",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Quote",
+				"methodName": "quote",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "quote"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"quote",
+								"quote:XBTUSD",
+								"quote:XBTM20",
+								"quote:XBTU20",
+								"quote:ETHUSD",
+								"quote:ETHM20",
+								"quote:ETHUSDM20",
+								"quote:LTCM20",
+								"quote:.EVOL7D",
+								"quote:.BADAXBT",
+								"quote:.BADAXBT30M",
+								"quote:.BBCHXBT",
+								"quote:.BBCHXBT30M",
+								"quote:.BEOSXBT",
+								"quote:.BEOSXBT30M",
+								"quote:.BXRPXBT",
+								"quote:.BXRPXBT30M",
+								"quote:.BTRXXBT",
+								"quote:.BTRXXBT30M",
+								"quote:.BADAXBT_NEXT",
+								"quote:.BBCHXBT_NEXT",
+								"quote:.BEOSXBT_NEXT",
+								"quote:.BTRXXBT_NEXT",
+								"quote:.BXRPXBT_NEXT",
+								"quote:.BXRP_NEXT",
+								"quote:.BXRP",
+								"quote:.XRPBON",
+								"quote:.XRPBON2H",
+								"quote:.XRPBON8H",
+								"quote:.XRPUSDPI",
+								"quote:.XRPUSDPI2H",
+								"quote:.XRPUSDPI8H",
+								"quote:XRPM20",
+								"quote:BCHM20",
+								"quote:ADAM20",
+								"quote:EOSM20",
+								"quote:TRXM20",
+								"quote:XRPUSD",
+								"quote:.XBT",
+								"quote:.XBT30M",
+								"quote:.XBTBON",
+								"quote:.XBTBON8H",
+								"quote:.XBTUSDPI",
+								"quote:.XBTUSDPI8H",
+								"quote:.XBTBON2H",
+								"quote:.XBTUSDPI2H",
+								"quote:.BXBT",
+								"quote:.BXBT30M",
+								"quote:.BXBT_NEXT",
+								"quote:.BVOL",
+								"quote:.BVOL24H",
+								"quote:.BVOL7D",
+								"quote:.ETHBON",
+								"quote:.ETHBON2H",
+								"quote:.ETHBON8H",
+								"quote:.ETHUSDPI",
+								"quote:.ETHUSDPI2H",
+								"quote:.ETHUSDPI8H",
+								"quote:.BETH",
+								"quote:.BETH30M",
+								"quote:.BETHXBT",
+								"quote:.BETHXBT30M",
+								"quote:.BETH_NEXT",
+								"quote:.BETHXBT_NEXT",
+								"quote:.BLTCXBT",
+								"quote:.BLTCXBT30M",
+								"quote:.BLTCXBT_NEXT",
+								"quote:.USDBON",
+								"quote:.USDBON8H",
+								"quote:.USDBON2H"
+							],
+							"initialValue": "quote",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Quote",
+				"methodName": "quoteBin1m",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "quoteBin1m"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"quoteBin1m",
+								"quoteBin1m:XBTUSD",
+								"quoteBin1m:XBTM20",
+								"quoteBin1m:XBTU20",
+								"quoteBin1m:ETHUSD",
+								"quoteBin1m:ETHM20",
+								"quoteBin1m:ETHUSDM20",
+								"quoteBin1m:LTCM20",
+								"quoteBin1m:.EVOL7D",
+								"quoteBin1m:.BADAXBT",
+								"quoteBin1m:.BADAXBT30M",
+								"quoteBin1m:.BBCHXBT",
+								"quoteBin1m:.BBCHXBT30M",
+								"quoteBin1m:.BEOSXBT",
+								"quoteBin1m:.BEOSXBT30M",
+								"quoteBin1m:.BXRPXBT",
+								"quoteBin1m:.BXRPXBT30M",
+								"quoteBin1m:.BTRXXBT",
+								"quoteBin1m:.BTRXXBT30M",
+								"quoteBin1m:.BADAXBT_NEXT",
+								"quoteBin1m:.BBCHXBT_NEXT",
+								"quoteBin1m:.BEOSXBT_NEXT",
+								"quoteBin1m:.BTRXXBT_NEXT",
+								"quoteBin1m:.BXRPXBT_NEXT",
+								"quoteBin1m:.BXRP_NEXT",
+								"quoteBin1m:.BXRP",
+								"quoteBin1m:.XRPBON",
+								"quoteBin1m:.XRPBON2H",
+								"quoteBin1m:.XRPBON8H",
+								"quoteBin1m:.XRPUSDPI",
+								"quoteBin1m:.XRPUSDPI2H",
+								"quoteBin1m:.XRPUSDPI8H",
+								"quoteBin1m:XRPM20",
+								"quoteBin1m:BCHM20",
+								"quoteBin1m:ADAM20",
+								"quoteBin1m:EOSM20",
+								"quoteBin1m:TRXM20",
+								"quoteBin1m:XRPUSD",
+								"quoteBin1m:.XBT",
+								"quoteBin1m:.XBT30M",
+								"quoteBin1m:.XBTBON",
+								"quoteBin1m:.XBTBON8H",
+								"quoteBin1m:.XBTUSDPI",
+								"quoteBin1m:.XBTUSDPI8H",
+								"quoteBin1m:.XBTBON2H",
+								"quoteBin1m:.XBTUSDPI2H",
+								"quoteBin1m:.BXBT",
+								"quoteBin1m:.BXBT30M",
+								"quoteBin1m:.BXBT_NEXT",
+								"quoteBin1m:.BVOL",
+								"quoteBin1m:.BVOL24H",
+								"quoteBin1m:.BVOL7D",
+								"quoteBin1m:.ETHBON",
+								"quoteBin1m:.ETHBON2H",
+								"quoteBin1m:.ETHBON8H",
+								"quoteBin1m:.ETHUSDPI",
+								"quoteBin1m:.ETHUSDPI2H",
+								"quoteBin1m:.ETHUSDPI8H",
+								"quoteBin1m:.BETH",
+								"quoteBin1m:.BETH30M",
+								"quoteBin1m:.BETHXBT",
+								"quoteBin1m:.BETHXBT30M",
+								"quoteBin1m:.BETH_NEXT",
+								"quoteBin1m:.BETHXBT_NEXT",
+								"quoteBin1m:.BLTCXBT",
+								"quoteBin1m:.BLTCXBT30M",
+								"quoteBin1m:.BLTCXBT_NEXT",
+								"quoteBin1m:.USDBON",
+								"quoteBin1m:.USDBON8H",
+								"quoteBin1m:.USDBON2H"
+							],
+							"initialValue": "quoteBin1m",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Quote",
+				"methodName": "quoteBin5m",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "quoteBin5m"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"quoteBin5m",
+								"quoteBin5m:XBTUSD",
+								"quoteBin5m:XBTM20",
+								"quoteBin5m:XBTU20",
+								"quoteBin5m:ETHUSD",
+								"quoteBin5m:ETHM20",
+								"quoteBin5m:ETHUSDM20",
+								"quoteBin5m:LTCM20",
+								"quoteBin5m:.EVOL7D",
+								"quoteBin5m:.BADAXBT",
+								"quoteBin5m:.BADAXBT30M",
+								"quoteBin5m:.BBCHXBT",
+								"quoteBin5m:.BBCHXBT30M",
+								"quoteBin5m:.BEOSXBT",
+								"quoteBin5m:.BEOSXBT30M",
+								"quoteBin5m:.BXRPXBT",
+								"quoteBin5m:.BXRPXBT30M",
+								"quoteBin5m:.BTRXXBT",
+								"quoteBin5m:.BTRXXBT30M",
+								"quoteBin5m:.BADAXBT_NEXT",
+								"quoteBin5m:.BBCHXBT_NEXT",
+								"quoteBin5m:.BEOSXBT_NEXT",
+								"quoteBin5m:.BTRXXBT_NEXT",
+								"quoteBin5m:.BXRPXBT_NEXT",
+								"quoteBin5m:.BXRP_NEXT",
+								"quoteBin5m:.BXRP",
+								"quoteBin5m:.XRPBON",
+								"quoteBin5m:.XRPBON2H",
+								"quoteBin5m:.XRPBON8H",
+								"quoteBin5m:.XRPUSDPI",
+								"quoteBin5m:.XRPUSDPI2H",
+								"quoteBin5m:.XRPUSDPI8H",
+								"quoteBin5m:XRPM20",
+								"quoteBin5m:BCHM20",
+								"quoteBin5m:ADAM20",
+								"quoteBin5m:EOSM20",
+								"quoteBin5m:TRXM20",
+								"quoteBin5m:XRPUSD",
+								"quoteBin5m:.XBT",
+								"quoteBin5m:.XBT30M",
+								"quoteBin5m:.XBTBON",
+								"quoteBin5m:.XBTBON8H",
+								"quoteBin5m:.XBTUSDPI",
+								"quoteBin5m:.XBTUSDPI8H",
+								"quoteBin5m:.XBTBON2H",
+								"quoteBin5m:.XBTUSDPI2H",
+								"quoteBin5m:.BXBT",
+								"quoteBin5m:.BXBT30M",
+								"quoteBin5m:.BXBT_NEXT",
+								"quoteBin5m:.BVOL",
+								"quoteBin5m:.BVOL24H",
+								"quoteBin5m:.BVOL7D",
+								"quoteBin5m:.ETHBON",
+								"quoteBin5m:.ETHBON2H",
+								"quoteBin5m:.ETHBON8H",
+								"quoteBin5m:.ETHUSDPI",
+								"quoteBin5m:.ETHUSDPI2H",
+								"quoteBin5m:.ETHUSDPI8H",
+								"quoteBin5m:.BETH",
+								"quoteBin5m:.BETH30M",
+								"quoteBin5m:.BETHXBT",
+								"quoteBin5m:.BETHXBT30M",
+								"quoteBin5m:.BETH_NEXT",
+								"quoteBin5m:.BETHXBT_NEXT",
+								"quoteBin5m:.BLTCXBT",
+								"quoteBin5m:.BLTCXBT30M",
+								"quoteBin5m:.BLTCXBT_NEXT",
+								"quoteBin5m:.USDBON",
+								"quoteBin5m:.USDBON8H",
+								"quoteBin5m:.USDBON2H"
+							],
+							"initialValue": "quoteBin5m",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Quote",
+				"methodName": "quoteBin1h",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "quoteBin1h"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"quoteBin1h",
+								"quoteBin1h:XBTUSD",
+								"quoteBin1h:XBTM20",
+								"quoteBin1h:XBTU20",
+								"quoteBin1h:ETHUSD",
+								"quoteBin1h:ETHM20",
+								"quoteBin1h:ETHUSDM20",
+								"quoteBin1h:LTCM20",
+								"quoteBin1h:.EVOL7D",
+								"quoteBin1h:.BADAXBT",
+								"quoteBin1h:.BADAXBT30M",
+								"quoteBin1h:.BBCHXBT",
+								"quoteBin1h:.BBCHXBT30M",
+								"quoteBin1h:.BEOSXBT",
+								"quoteBin1h:.BEOSXBT30M",
+								"quoteBin1h:.BXRPXBT",
+								"quoteBin1h:.BXRPXBT30M",
+								"quoteBin1h:.BTRXXBT",
+								"quoteBin1h:.BTRXXBT30M",
+								"quoteBin1h:.BADAXBT_NEXT",
+								"quoteBin1h:.BBCHXBT_NEXT",
+								"quoteBin1h:.BEOSXBT_NEXT",
+								"quoteBin1h:.BTRXXBT_NEXT",
+								"quoteBin1h:.BXRPXBT_NEXT",
+								"quoteBin1h:.BXRP_NEXT",
+								"quoteBin1h:.BXRP",
+								"quoteBin1h:.XRPBON",
+								"quoteBin1h:.XRPBON2H",
+								"quoteBin1h:.XRPBON8H",
+								"quoteBin1h:.XRPUSDPI",
+								"quoteBin1h:.XRPUSDPI2H",
+								"quoteBin1h:.XRPUSDPI8H",
+								"quoteBin1h:XRPM20",
+								"quoteBin1h:BCHM20",
+								"quoteBin1h:ADAM20",
+								"quoteBin1h:EOSM20",
+								"quoteBin1h:TRXM20",
+								"quoteBin1h:XRPUSD",
+								"quoteBin1h:.XBT",
+								"quoteBin1h:.XBT30M",
+								"quoteBin1h:.XBTBON",
+								"quoteBin1h:.XBTBON8H",
+								"quoteBin1h:.XBTUSDPI",
+								"quoteBin1h:.XBTUSDPI8H",
+								"quoteBin1h:.XBTBON2H",
+								"quoteBin1h:.XBTUSDPI2H",
+								"quoteBin1h:.BXBT",
+								"quoteBin1h:.BXBT30M",
+								"quoteBin1h:.BXBT_NEXT",
+								"quoteBin1h:.BVOL",
+								"quoteBin1h:.BVOL24H",
+								"quoteBin1h:.BVOL7D",
+								"quoteBin1h:.ETHBON",
+								"quoteBin1h:.ETHBON2H",
+								"quoteBin1h:.ETHBON8H",
+								"quoteBin1h:.ETHUSDPI",
+								"quoteBin1h:.ETHUSDPI2H",
+								"quoteBin1h:.ETHUSDPI8H",
+								"quoteBin1h:.BETH",
+								"quoteBin1h:.BETH30M",
+								"quoteBin1h:.BETHXBT",
+								"quoteBin1h:.BETHXBT30M",
+								"quoteBin1h:.BETH_NEXT",
+								"quoteBin1h:.BETHXBT_NEXT",
+								"quoteBin1h:.BLTCXBT",
+								"quoteBin1h:.BLTCXBT30M",
+								"quoteBin1h:.BLTCXBT_NEXT",
+								"quoteBin1h:.USDBON",
+								"quoteBin1h:.USDBON8H",
+								"quoteBin1h:.USDBON2H"
+							],
+							"initialValue": "quoteBin1h",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Quote",
+				"methodName": "quoteBin1d",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "quoteBin1d"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"quoteBin1d",
+								"quoteBin1d:XBTUSD",
+								"quoteBin1d:XBTM20",
+								"quoteBin1d:XBTU20",
+								"quoteBin1d:ETHUSD",
+								"quoteBin1d:ETHM20",
+								"quoteBin1d:ETHUSDM20",
+								"quoteBin1d:LTCM20",
+								"quoteBin1d:.EVOL7D",
+								"quoteBin1d:.BADAXBT",
+								"quoteBin1d:.BADAXBT30M",
+								"quoteBin1d:.BBCHXBT",
+								"quoteBin1d:.BBCHXBT30M",
+								"quoteBin1d:.BEOSXBT",
+								"quoteBin1d:.BEOSXBT30M",
+								"quoteBin1d:.BXRPXBT",
+								"quoteBin1d:.BXRPXBT30M",
+								"quoteBin1d:.BTRXXBT",
+								"quoteBin1d:.BTRXXBT30M",
+								"quoteBin1d:.BADAXBT_NEXT",
+								"quoteBin1d:.BBCHXBT_NEXT",
+								"quoteBin1d:.BEOSXBT_NEXT",
+								"quoteBin1d:.BTRXXBT_NEXT",
+								"quoteBin1d:.BXRPXBT_NEXT",
+								"quoteBin1d:.BXRP_NEXT",
+								"quoteBin1d:.BXRP",
+								"quoteBin1d:.XRPBON",
+								"quoteBin1d:.XRPBON2H",
+								"quoteBin1d:.XRPBON8H",
+								"quoteBin1d:.XRPUSDPI",
+								"quoteBin1d:.XRPUSDPI2H",
+								"quoteBin1d:.XRPUSDPI8H",
+								"quoteBin1d:XRPM20",
+								"quoteBin1d:BCHM20",
+								"quoteBin1d:ADAM20",
+								"quoteBin1d:EOSM20",
+								"quoteBin1d:TRXM20",
+								"quoteBin1d:XRPUSD",
+								"quoteBin1d:.XBT",
+								"quoteBin1d:.XBT30M",
+								"quoteBin1d:.XBTBON",
+								"quoteBin1d:.XBTBON8H",
+								"quoteBin1d:.XBTUSDPI",
+								"quoteBin1d:.XBTUSDPI8H",
+								"quoteBin1d:.XBTBON2H",
+								"quoteBin1d:.XBTUSDPI2H",
+								"quoteBin1d:.BXBT",
+								"quoteBin1d:.BXBT30M",
+								"quoteBin1d:.BXBT_NEXT",
+								"quoteBin1d:.BVOL",
+								"quoteBin1d:.BVOL24H",
+								"quoteBin1d:.BVOL7D",
+								"quoteBin1d:.ETHBON",
+								"quoteBin1d:.ETHBON2H",
+								"quoteBin1d:.ETHBON8H",
+								"quoteBin1d:.ETHUSDPI",
+								"quoteBin1d:.ETHUSDPI2H",
+								"quoteBin1d:.ETHUSDPI8H",
+								"quoteBin1d:.BETH",
+								"quoteBin1d:.BETH30M",
+								"quoteBin1d:.BETHXBT",
+								"quoteBin1d:.BETHXBT30M",
+								"quoteBin1d:.BETH_NEXT",
+								"quoteBin1d:.BETHXBT_NEXT",
+								"quoteBin1d:.BLTCXBT",
+								"quoteBin1d:.BLTCXBT30M",
+								"quoteBin1d:.BLTCXBT_NEXT",
+								"quoteBin1d:.USDBON",
+								"quoteBin1d:.USDBON8H",
+								"quoteBin1d:.USDBON2H"
+							],
+							"initialValue": "quoteBin1d",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Settlements",
+				"methodName": "settlement",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "settlement"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"settlement",
+								"settlement:XBTUSD",
+								"settlement:XBTM20",
+								"settlement:XBTU20",
+								"settlement:ETHUSD",
+								"settlement:ETHM20",
+								"settlement:ETHUSDM20",
+								"settlement:LTCM20",
+								"settlement:.EVOL7D",
+								"settlement:.BADAXBT",
+								"settlement:.BADAXBT30M",
+								"settlement:.BBCHXBT",
+								"settlement:.BBCHXBT30M",
+								"settlement:.BEOSXBT",
+								"settlement:.BEOSXBT30M",
+								"settlement:.BXRPXBT",
+								"settlement:.BXRPXBT30M",
+								"settlement:.BTRXXBT",
+								"settlement:.BTRXXBT30M",
+								"settlement:.BADAXBT_NEXT",
+								"settlement:.BBCHXBT_NEXT",
+								"settlement:.BEOSXBT_NEXT",
+								"settlement:.BTRXXBT_NEXT",
+								"settlement:.BXRPXBT_NEXT",
+								"settlement:.BXRP_NEXT",
+								"settlement:.BXRP",
+								"settlement:.XRPBON",
+								"settlement:.XRPBON2H",
+								"settlement:.XRPBON8H",
+								"settlement:.XRPUSDPI",
+								"settlement:.XRPUSDPI2H",
+								"settlement:.XRPUSDPI8H",
+								"settlement:XRPM20",
+								"settlement:BCHM20",
+								"settlement:ADAM20",
+								"settlement:EOSM20",
+								"settlement:TRXM20",
+								"settlement:XRPUSD",
+								"settlement:.XBT",
+								"settlement:.XBT30M",
+								"settlement:.XBTBON",
+								"settlement:.XBTBON8H",
+								"settlement:.XBTUSDPI",
+								"settlement:.XBTUSDPI8H",
+								"settlement:.XBTBON2H",
+								"settlement:.XBTUSDPI2H",
+								"settlement:.BXBT",
+								"settlement:.BXBT30M",
+								"settlement:.BXBT_NEXT",
+								"settlement:.BVOL",
+								"settlement:.BVOL24H",
+								"settlement:.BVOL7D",
+								"settlement:.ETHBON",
+								"settlement:.ETHBON2H",
+								"settlement:.ETHBON8H",
+								"settlement:.ETHUSDPI",
+								"settlement:.ETHUSDPI2H",
+								"settlement:.ETHUSDPI8H",
+								"settlement:.BETH",
+								"settlement:.BETH30M",
+								"settlement:.BETHXBT",
+								"settlement:.BETHXBT30M",
+								"settlement:.BETH_NEXT",
+								"settlement:.BETHXBT_NEXT",
+								"settlement:.BLTCXBT",
+								"settlement:.BLTCXBT30M",
+								"settlement:.BLTCXBT_NEXT",
+								"settlement:.USDBON",
+								"settlement:.USDBON8H",
+								"settlement:.USDBON2H"
+							],
+							"initialValue": "settlement",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trades",
+				"methodName": "trade",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "trade"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"trade",
+								"trade:XBTUSD",
+								"trade:XBTM20",
+								"trade:XBTU20",
+								"trade:ETHUSD",
+								"trade:ETHM20",
+								"trade:ETHUSDM20",
+								"trade:LTCM20",
+								"trade:.EVOL7D",
+								"trade:.BADAXBT",
+								"trade:.BADAXBT30M",
+								"trade:.BBCHXBT",
+								"trade:.BBCHXBT30M",
+								"trade:.BEOSXBT",
+								"trade:.BEOSXBT30M",
+								"trade:.BXRPXBT",
+								"trade:.BXRPXBT30M",
+								"trade:.BTRXXBT",
+								"trade:.BTRXXBT30M",
+								"trade:.BADAXBT_NEXT",
+								"trade:.BBCHXBT_NEXT",
+								"trade:.BEOSXBT_NEXT",
+								"trade:.BTRXXBT_NEXT",
+								"trade:.BXRPXBT_NEXT",
+								"trade:.BXRP_NEXT",
+								"trade:.BXRP",
+								"trade:.XRPBON",
+								"trade:.XRPBON2H",
+								"trade:.XRPBON8H",
+								"trade:.XRPUSDPI",
+								"trade:.XRPUSDPI2H",
+								"trade:.XRPUSDPI8H",
+								"trade:XRPM20",
+								"trade:BCHM20",
+								"trade:ADAM20",
+								"trade:EOSM20",
+								"trade:TRXM20",
+								"trade:XRPUSD",
+								"trade:.XBT",
+								"trade:.XBT30M",
+								"trade:.XBTBON",
+								"trade:.XBTBON8H",
+								"trade:.XBTUSDPI",
+								"trade:.XBTUSDPI8H",
+								"trade:.XBTBON2H",
+								"trade:.XBTUSDPI2H",
+								"trade:.BXBT",
+								"trade:.BXBT30M",
+								"trade:.BXBT_NEXT",
+								"trade:.BVOL",
+								"trade:.BVOL24H",
+								"trade:.BVOL7D",
+								"trade:.ETHBON",
+								"trade:.ETHBON2H",
+								"trade:.ETHBON8H",
+								"trade:.ETHUSDPI",
+								"trade:.ETHUSDPI2H",
+								"trade:.ETHUSDPI8H",
+								"trade:.BETH",
+								"trade:.BETH30M",
+								"trade:.BETHXBT",
+								"trade:.BETHXBT30M",
+								"trade:.BETH_NEXT",
+								"trade:.BETHXBT_NEXT",
+								"trade:.BLTCXBT",
+								"trade:.BLTCXBT30M",
+								"trade:.BLTCXBT_NEXT",
+								"trade:.USDBON",
+								"trade:.USDBON8H",
+								"trade:.USDBON2H"
+							],
+							"initialValue": "trade",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trades",
+				"methodName": "tradeBin1m",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "tradeBin1m"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "unsubscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"trade",
+								"trade:XBTUSD",
+								"trade:XBTM20",
+								"trade:XBTU20",
+								"trade:ETHUSD",
+								"trade:ETHM20",
+								"trade:ETHUSDM20",
+								"trade:LTCM20",
+								"trade:.EVOL7D",
+								"trade:.BADAXBT",
+								"trade:.BADAXBT30M",
+								"trade:.BBCHXBT",
+								"trade:.BBCHXBT30M",
+								"trade:.BEOSXBT",
+								"trade:.BEOSXBT30M",
+								"trade:.BXRPXBT",
+								"trade:.BXRPXBT30M",
+								"trade:.BTRXXBT",
+								"trade:.BTRXXBT30M",
+								"trade:.BADAXBT_NEXT",
+								"trade:.BBCHXBT_NEXT",
+								"trade:.BEOSXBT_NEXT",
+								"trade:.BTRXXBT_NEXT",
+								"trade:.BXRPXBT_NEXT",
+								"trade:.BXRP_NEXT",
+								"trade:.BXRP",
+								"trade:.XRPBON",
+								"trade:.XRPBON2H",
+								"trade:.XRPBON8H",
+								"trade:.XRPUSDPI",
+								"trade:.XRPUSDPI2H",
+								"trade:.XRPUSDPI8H",
+								"trade:XRPM20",
+								"trade:BCHM20",
+								"trade:ADAM20",
+								"trade:EOSM20",
+								"trade:TRXM20",
+								"trade:XRPUSD",
+								"trade:.XBT",
+								"trade:.XBT30M",
+								"trade:.XBTBON",
+								"trade:.XBTBON8H",
+								"trade:.XBTUSDPI",
+								"trade:.XBTUSDPI8H",
+								"trade:.XBTBON2H",
+								"trade:.XBTUSDPI2H",
+								"trade:.BXBT",
+								"trade:.BXBT30M",
+								"trade:.BXBT_NEXT",
+								"trade:.BVOL",
+								"trade:.BVOL24H",
+								"trade:.BVOL7D",
+								"trade:.ETHBON",
+								"trade:.ETHBON2H",
+								"trade:.ETHBON8H",
+								"trade:.ETHUSDPI",
+								"trade:.ETHUSDPI2H",
+								"trade:.ETHUSDPI8H",
+								"trade:.BETH",
+								"trade:.BETH30M",
+								"trade:.BETHXBT",
+								"trade:.BETHXBT30M",
+								"trade:.BETH_NEXT",
+								"trade:.BETHXBT_NEXT",
+								"trade:.BLTCXBT",
+								"trade:.BLTCXBT30M",
+								"trade:.BLTCXBT_NEXT",
+								"trade:.USDBON",
+								"trade:.USDBON8H",
+								"trade:.USDBON2H"
+							],
+							"initialValue": "trade",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trades",
+				"methodName": "tradeBin5m",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "tradeBin5m"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "unsubscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"tradeBin1m",
+								"tradeBin1m:XBTUSD",
+								"tradeBin1m:XBTM20",
+								"tradeBin1m:XBTU20",
+								"tradeBin1m:ETHUSD",
+								"tradeBin1m:ETHM20",
+								"tradeBin1m:ETHUSDM20",
+								"tradeBin1m:LTCM20",
+								"tradeBin1m:.EVOL7D",
+								"tradeBin1m:.BADAXBT",
+								"tradeBin1m:.BADAXBT30M",
+								"tradeBin1m:.BBCHXBT",
+								"tradeBin1m:.BBCHXBT30M",
+								"tradeBin1m:.BEOSXBT",
+								"tradeBin1m:.BEOSXBT30M",
+								"tradeBin1m:.BXRPXBT",
+								"tradeBin1m:.BXRPXBT30M",
+								"tradeBin1m:.BTRXXBT",
+								"tradeBin1m:.BTRXXBT30M",
+								"tradeBin1m:.BADAXBT_NEXT",
+								"tradeBin1m:.BBCHXBT_NEXT",
+								"tradeBin1m:.BEOSXBT_NEXT",
+								"tradeBin1m:.BTRXXBT_NEXT",
+								"tradeBin1m:.BXRPXBT_NEXT",
+								"tradeBin1m:.BXRP_NEXT",
+								"tradeBin1m:.BXRP",
+								"tradeBin1m:.XRPBON",
+								"tradeBin1m:.XRPBON2H",
+								"tradeBin1m:.XRPBON8H",
+								"tradeBin1m:.XRPUSDPI",
+								"tradeBin1m:.XRPUSDPI2H",
+								"tradeBin1m:.XRPUSDPI8H",
+								"tradeBin1m:XRPM20",
+								"tradeBin1m:BCHM20",
+								"tradeBin1m:ADAM20",
+								"tradeBin1m:EOSM20",
+								"tradeBin1m:TRXM20",
+								"tradeBin1m:XRPUSD",
+								"tradeBin1m:.XBT",
+								"tradeBin1m:.XBT30M",
+								"tradeBin1m:.XBTBON",
+								"tradeBin1m:.XBTBON8H",
+								"tradeBin1m:.XBTUSDPI",
+								"tradeBin1m:.XBTUSDPI8H",
+								"tradeBin1m:.XBTBON2H",
+								"tradeBin1m:.XBTUSDPI2H",
+								"tradeBin1m:.BXBT",
+								"tradeBin1m:.BXBT30M",
+								"tradeBin1m:.BXBT_NEXT",
+								"tradeBin1m:.BVOL",
+								"tradeBin1m:.BVOL24H",
+								"tradeBin1m:.BVOL7D",
+								"tradeBin1m:.ETHBON",
+								"tradeBin1m:.ETHBON2H",
+								"tradeBin1m:.ETHBON8H",
+								"tradeBin1m:.ETHUSDPI",
+								"tradeBin1m:.ETHUSDPI2H",
+								"tradeBin1m:.ETHUSDPI8H",
+								"tradeBin1m:.BETH",
+								"tradeBin1m:.BETH30M",
+								"tradeBin1m:.BETHXBT",
+								"tradeBin1m:.BETHXBT30M",
+								"tradeBin1m:.BETH_NEXT",
+								"tradeBin1m:.BETHXBT_NEXT",
+								"tradeBin1m:.BLTCXBT",
+								"tradeBin1m:.BLTCXBT30M",
+								"tradeBin1m:.BLTCXBT_NEXT",
+								"tradeBin1m:.USDBON",
+								"tradeBin1m:.USDBON8H",
+								"tradeBin1m:.USDBON2H"
+							],
+							"initialValue": "tradeBin1m",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trades",
+				"methodName": "tradeBin1h",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "tradeBin1h"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"tradeBin1h",
+								"tradeBin1h:XBTUSD",
+								"tradeBin1h:XBTM20",
+								"tradeBin1h:XBTU20",
+								"tradeBin1h:ETHUSD",
+								"tradeBin1h:ETHM20",
+								"tradeBin1h:ETHUSDM20",
+								"tradeBin1h:LTCM20",
+								"tradeBin1h:.EVOL7D",
+								"tradeBin1h:.BADAXBT",
+								"tradeBin1h:.BADAXBT30M",
+								"tradeBin1h:.BBCHXBT",
+								"tradeBin1h:.BBCHXBT30M",
+								"tradeBin1h:.BEOSXBT",
+								"tradeBin1h:.BEOSXBT30M",
+								"tradeBin1h:.BXRPXBT",
+								"tradeBin1h:.BXRPXBT30M",
+								"tradeBin1h:.BTRXXBT",
+								"tradeBin1h:.BTRXXBT30M",
+								"tradeBin1h:.BADAXBT_NEXT",
+								"tradeBin1h:.BBCHXBT_NEXT",
+								"tradeBin1h:.BEOSXBT_NEXT",
+								"tradeBin1h:.BTRXXBT_NEXT",
+								"tradeBin1h:.BXRPXBT_NEXT",
+								"tradeBin1h:.BXRP_NEXT",
+								"tradeBin1h:.BXRP",
+								"tradeBin1h:.XRPBON",
+								"tradeBin1h:.XRPBON2H",
+								"tradeBin1h:.XRPBON8H",
+								"tradeBin1h:.XRPUSDPI",
+								"tradeBin1h:.XRPUSDPI2H",
+								"tradeBin1h:.XRPUSDPI8H",
+								"tradeBin1h:XRPM20",
+								"tradeBin1h:BCHM20",
+								"tradeBin1h:ADAM20",
+								"tradeBin1h:EOSM20",
+								"tradeBin1h:TRXM20",
+								"tradeBin1h:XRPUSD",
+								"tradeBin1h:.XBT",
+								"tradeBin1h:.XBT30M",
+								"tradeBin1h:.XBTBON",
+								"tradeBin1h:.XBTBON8H",
+								"tradeBin1h:.XBTUSDPI",
+								"tradeBin1h:.XBTUSDPI8H",
+								"tradeBin1h:.XBTBON2H",
+								"tradeBin1h:.XBTUSDPI2H",
+								"tradeBin1h:.BXBT",
+								"tradeBin1h:.BXBT30M",
+								"tradeBin1h:.BXBT_NEXT",
+								"tradeBin1h:.BVOL",
+								"tradeBin1h:.BVOL24H",
+								"tradeBin1h:.BVOL7D",
+								"tradeBin1h:.ETHBON",
+								"tradeBin1h:.ETHBON2H",
+								"tradeBin1h:.ETHBON8H",
+								"tradeBin1h:.ETHUSDPI",
+								"tradeBin1h:.ETHUSDPI2H",
+								"tradeBin1h:.ETHUSDPI8H",
+								"tradeBin1h:.BETH",
+								"tradeBin1h:.BETH30M",
+								"tradeBin1h:.BETHXBT",
+								"tradeBin1h:.BETHXBT30M",
+								"tradeBin1h:.BETH_NEXT",
+								"tradeBin1h:.BETHXBT_NEXT",
+								"tradeBin1h:.BLTCXBT",
+								"tradeBin1h:.BLTCXBT30M",
+								"tradeBin1h:.BLTCXBT_NEXT",
+								"tradeBin1h:.USDBON",
+								"tradeBin1h:.USDBON8H",
+								"tradeBin1h:.USDBON2H"
+							],
+							"initialValue": "tradeBin1h",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Trades",
+				"methodName": "tradeBin1d",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "tradeBin1d"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "select",
+							"data": [
+								"tradeBin1d",
+								"tradeBin1d:XBTUSD",
+								"tradeBin1d:XBTM20",
+								"tradeBin1d:XBTU20",
+								"tradeBin1d:ETHUSD",
+								"tradeBin1d:ETHM20",
+								"tradeBin1d:ETHUSDM20",
+								"tradeBin1d:LTCM20",
+								"tradeBin1d:.EVOL7D",
+								"tradeBin1d:.BADAXBT",
+								"tradeBin1d:.BADAXBT30M",
+								"tradeBin1d:.BBCHXBT",
+								"tradeBin1d:.BBCHXBT30M",
+								"tradeBin1d:.BEOSXBT",
+								"tradeBin1d:.BEOSXBT30M",
+								"tradeBin1d:.BXRPXBT",
+								"tradeBin1d:.BXRPXBT30M",
+								"tradeBin1d:.BTRXXBT",
+								"tradeBin1d:.BTRXXBT30M",
+								"tradeBin1d:.BADAXBT_NEXT",
+								"tradeBin1d:.BBCHXBT_NEXT",
+								"tradeBin1d:.BEOSXBT_NEXT",
+								"tradeBin1d:.BTRXXBT_NEXT",
+								"tradeBin1d:.BXRPXBT_NEXT",
+								"tradeBin1d:.BXRP_NEXT",
+								"tradeBin1d:.BXRP",
+								"tradeBin1d:.XRPBON",
+								"tradeBin1d:.XRPBON2H",
+								"tradeBin1d:.XRPBON8H",
+								"tradeBin1d:.XRPUSDPI",
+								"tradeBin1d:.XRPUSDPI2H",
+								"tradeBin1d:.XRPUSDPI8H",
+								"tradeBin1d:XRPM20",
+								"tradeBin1d:BCHM20",
+								"tradeBin1d:ADAM20",
+								"tradeBin1d:EOSM20",
+								"tradeBin1d:TRXM20",
+								"tradeBin1d:XRPUSD",
+								"tradeBin1d:.XBT",
+								"tradeBin1d:.XBT30M",
+								"tradeBin1d:.XBTBON",
+								"tradeBin1d:.XBTBON8H",
+								"tradeBin1d:.XBTUSDPI",
+								"tradeBin1d:.XBTUSDPI8H",
+								"tradeBin1d:.XBTBON2H",
+								"tradeBin1d:.XBTUSDPI2H",
+								"tradeBin1d:.BXBT",
+								"tradeBin1d:.BXBT30M",
+								"tradeBin1d:.BXBT_NEXT",
+								"tradeBin1d:.BVOL",
+								"tradeBin1d:.BVOL24H",
+								"tradeBin1d:.BVOL7D",
+								"tradeBin1d:.ETHBON",
+								"tradeBin1d:.ETHBON2H",
+								"tradeBin1d:.ETHBON8H",
+								"tradeBin1d:.ETHUSDPI",
+								"tradeBin1d:.ETHUSDPI2H",
+								"tradeBin1d:.ETHUSDPI8H",
+								"tradeBin1d:.BETH",
+								"tradeBin1d:.BETH30M",
+								"tradeBin1d:.BETHXBT",
+								"tradeBin1d:.BETHXBT30M",
+								"tradeBin1d:.BETH_NEXT",
+								"tradeBin1d:.BETHXBT_NEXT",
+								"tradeBin1d:.BLTCXBT",
+								"tradeBin1d:.BLTCXBT30M",
+								"tradeBin1d:.BLTCXBT_NEXT",
+								"tradeBin1d:.USDBON",
+								"tradeBin1d:.USDBON8H",
+								"tradeBin1d:.USDBON2H"
+							],
+							"initialValue": "tradeBin1d",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			}
+		]
+	},
+	"Bitmex multiplex": {
+		"url": "wss://www.bitmex.com/realtimemd",
+		"provider": "websocket",
+		"order": 30,
+		"methods": [
+			{
+				"group": "Private",
+				"methodName": "DeadMan'sSwitch",
+				"payload": {
+					"sample": {
+						"op": "cancelAllAfter",
+						"args": 60000
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "CancelSwitch",
+				"payload": {
+					"sample": {
+						"op": "cancelAllAfter",
+						"args": 0
+					}
+				}
+			}
+		]
+	},
+	"Bitmex direct subscription": {
+		"url": "wss://www.bitmex.com/realtime?subscribe=instrument,orderBookL2:XBTUSD",
+		"provider": "websocket",
+		"order": 35,
+		"methods": []
+	}
+}
