@@ -25,6 +25,302 @@
 				}
 			},
 			{
+				"group": "Private",
+				"methodName": "affiliate",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "affiliate"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "affiliate",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "execution",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "execution"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "execution",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "order",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "order"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "order",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "margin",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "margin"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "margin",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "position",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "position"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "position",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "privateNotifications",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "privateNotifications"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "privateNotifications",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "transact",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "transact"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "transact",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Private",
+				"methodName": "wallet",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": "wallet"
+					},
+					"structure": {
+						"op": "op",
+						"args": "args"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"args": {
+							"id": "args",
+							"label": "args",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "wallet",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
 				"group": "General",
 				"methodName": "Announcement",
 				"payload": {
@@ -2059,23 +2355,25 @@
 		"order": 30,
 		"methods": [
 			{
-				"group": "Private",
-				"methodName": "DeadMan'sSwitch",
+				"group": "Connections",
+				"methodName": "OpenConnection",
 				"payload": {
-					"sample": {
-						"op": "cancelAllAfter",
-						"args": 60000
-					}
+					"sample": [
+						1,
+						"hudsyg1q5dda4",
+						"user_1"
+					]
 				}
 			},
 			{
-				"group": "Private",
-				"methodName": "CancelSwitch",
+				"group": "Connections",
+				"methodName": "CloseConnection",
 				"payload": {
-					"sample": {
-						"op": "cancelAllAfter",
-						"args": 0
-					}
+					"sample": [
+						2,
+						"hudsyg1q5dda4",
+						"user_1"
+					]
 				}
 			}
 		]
