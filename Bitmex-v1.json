@@ -2378,6 +2378,26 @@
 			}
 		]
 	},
+	"[custom]-new-env-1": {
+		"url": "wss://www.bitmex.com/realtimemd",
+		"provider": "websocket",
+		"order": 3,
+		"methods": [
+			{
+				"group": "Connection",
+				"methodName": "OpenConnection",
+				"payload": {
+					"sample": {}
+				}
+			},
+			{
+				"group": "Connection",
+				"methodName": "CloseConnection",
+				"payload": {
+					"sample": {}
+			}
+		]
+	},
 	"Bitmex direct subscription": {
 		"url": "wss://www.bitmex.com/realtime?subscribe=instrument,orderBookL2:XBTUSD",
 		"provider": "websocket",
