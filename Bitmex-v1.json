@@ -2358,43 +2358,15 @@
 				"group": "Connections",
 				"methodName": "OpenConnection",
 				"payload": {
-					"sample": [
-						1,
-						"hudsyg1q5dda4",
-						"user_1"
-					]
+					"sample": {}
 				}
 			},
 			{
 				"group": "Connections",
 				"methodName": "CloseConnection",
 				"payload": {
-					"sample": [
-						2,
-						"hudsyg1q5dda4",
-						"user_1"
-					]
-				}
-			}
-		]
-	},
-	"[custom]-new-env-1": {
-		"url": "wss://www.bitmex.com/realtimemd",
-		"provider": "websocket",
-		"order": 3,
-		"methods": [
-			{
-				"group": "Connection",
-				"methodName": "OpenConnection",
-				"payload": {
 					"sample": {}
 				}
-			},
-			{
-				"group": "Connection",
-				"methodName": "CloseConnection",
-				"payload": {
-					"sample": {}
 			}
 		]
 	},
