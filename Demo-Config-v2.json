@@ -4,7 +4,7 @@
 		"methods": [
 			{
 				"group": "Group1",
-				"methodName": "Method1-Welcome",
+				"methodName": "___click_HERE___",
 				"payload": {
 					"sample": {
 						"title": "... Welcome to Sandy! ...",
