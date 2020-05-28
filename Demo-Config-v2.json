@@ -142,7 +142,7 @@
 			},
 			{
 				"group": "MessageBuilder",
-				"methodName": "HiddenTimestamp1",
+				"methodName": "HiddenTimestamp",
 				"payload": {
 					"sample": {
 						"message": "test",
@@ -255,12 +255,11 @@
 							"label": "details",
 							"type": "select",
 							"data": [
-								"",
-								"1",
-								"2",
-								"3"
+								1,
+								2,
+								3
 							],
-							"initialValue": "",
+							"initialValue": 1,
 							"required": false,
 							"valueType": "number"
 						}
