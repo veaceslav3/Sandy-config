@@ -1,0 +1,265 @@
+{
+	"echoWebSocket": {
+		"provider": "websocket",
+		"methods": [
+			{
+				"group": "Group1",
+				"methodName": "Method1-Welcome",
+				"payload": {
+					"sample": {
+						"title": "Welcome to Sandy!",
+						"Endpoints": {
+							"Location": "Left side, top area",
+							"Connect": "Click on RED icon to connect to the endpoint",
+							"ContextMenu": "Righ-click on endpoint",
+							"Options": [
+								"Duplicate endpoint",
+								"New endpoint",
+								"Edit endpoint",
+								"Delete endpoint"
+							]
+						},
+						"Methods": {
+							"Location": "Left side, middle area",
+							"ContextMenu": "Righ-click on method",
+							"Options": [
+								"Duplicate method",
+								"New method",
+								"Edit method",
+								"Delete method"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Group1",
+				"methodName": "Method2-Scenarios",
+				"payload": {
+					"sample": {
+						"Scenario": [
+							"Select the method and 'Send' the message",
+							"Resize any box as you need",
+							"Select second endpoint and see examples for message builder"
+						]
+					}
+				}
+			}
+		],
+		"url": "wss://echo.websocket.org/",
+		"order": 1
+	},
+	"[custom]-new-env-1": {
+		"url": "wss://echo.websocket.org/",
+		"provider": "websocket",
+		"order": 8,
+		"methods": [
+			{
+				"group": "MessageBuilder",
+				"methodName": "TextBox",
+				"payload": {
+					"sample": {
+						"message": "test"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"type": "input",
+							"label": "Message",
+							"initialValue": "echo message"
+						}
+					}
+				}
+			},
+			{
+				"group": "MessageBuilder",
+				"methodName": "Dropdown",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": "Some additional details"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "select",
+							"data": [
+								"Details message #1",
+								"Some additional details",
+								"Another option"
+							],
+							"initialValue": "Some additional details",
+							"required": false,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "MessageBuilder",
+				"methodName": "Timestamp",
+				"payload": {
+					"sample": {
+						"message": "test",
+						"timestamp": 1590577878302
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"label": "message",
+							"type": "input",
+							"initialValue": "test",
+							"required": true,
+							"valueType": "text"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "time",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number"
+						}
+					}
+				}
+			},
+			{
+				"group": "MessageBuilder",
+				"methodName": "HiddenTimestamp1",
+				"payload": {
+					"sample": {
+						"message": "test",
+						"timestamp": 1590577878302
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"label": "message",
+							"type": "input",
+							"initialValue": "test",
+							"required": true,
+							"valueType": "text"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "time",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number",
+							"hidden": true
+						}
+					}
+				}
+			},
+			{
+				"group": "MessageBuilder",
+				"methodName": "Dropdown-hiddenInput",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": "Some additional details"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true,
+							"hidden": "true"
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "select",
+							"data": [
+								"Some additional details",
+								"Details message #1",
+								"Another option"
+							],
+							"initialValue": "Some additional details",
+							"required": false,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "MessageBuilder",
+				"methodName": "NumberKey-Input",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": 1
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true,
+							"hidden": "true"
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "input",
+							"initialValue": 1,
+							"required": false,
+							"valueType": "number"
+						}
+					}
+				}
+			},
+			{
+				"group": "TO DO",
+				"methodName": "NumberKey-Select",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": 1
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true,
+							"hidden": "true"
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "select",
+							"data": [
+								"",
+								"1",
+								"2",
+								"3"
+							],
+							"initialValue": "",
+							"required": false,
+							"valueType": "number"
+						}
+					}
+				}
+			}
+		]
+	}
+}
