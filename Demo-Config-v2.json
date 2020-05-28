@@ -7,7 +7,7 @@
 				"methodName": "Method1-Welcome",
 				"payload": {
 					"sample": {
-						"title": "Welcome to Sandy!",
+						"title": "... Welcome to Sandy! ...",
 						"Endpoints": {
 							"Location": "Left side, top area",
 							"Connect": "Click on RED icon to connect to the endpoint",
@@ -27,6 +27,13 @@
 								"New method",
 								"Edit method",
 								"Delete method"
+							]
+						},
+						"MessageBuilder": {
+							"Location": "Left side, bottom area",
+							"Options": [
+								"Fill in input fields",
+								"Select predefined values from dropdown"
 							]
 						}
 					}
