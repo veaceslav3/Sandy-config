@@ -1,143 +1,72 @@
 {
-	"echoWebSocket": {
+	"WeatherFlow": {
+		"url": "wss://ws.weatherflow.com/swd/data?api_key=20c70eae-e62f-4d3b-b3a4-8586e90f3ac8",
 		"provider": "websocket",
+		"order": 1,
 		"methods": [
 			{
-				"group": "Group1",
-				"methodName": "Method1",
+				"group": "Devices",
+				"methodName": "Listen-start-device",
 				"payload": {
 					"sample": {
-						"WELCOME": "... Welcome to Sandy! ...",
-						"endpoints": {
-							"location": "Left side, top area",
-							"connect": "Click on RED icon to connect to the endpoint",
-							"contextMenu": "Righ-click on endpoint",
-							"options": [
-								"Duplicate endpoint",
-								"New endpoint",
-								"Edit endpoint",
-								"Delete endpoint"
-							]
-						},
-						"methods": {
-							"location": "Left side, middle area",
-							"contextMenu": "Righ-click on method",
-							"options": [
-								"Duplicate method",
-								"New method",
-								"Edit method",
-								"Delete method"
-							]
-						}
-					}
-				}
-			}
-		],
-		"url": "wss://echo.websocket.org/",
-		"order": 1
-	},
-	"[custom]-new-env-1": {
-		"url": "wss://echo.websocket.org/",
-		"provider": "websocket",
-		"order": 2,
-		"methods": [
-			{
-				"group": "MessageBuilder",
-				"methodName": "TestMessage",
-				"payload": {
-					"sample": {
-						"message": "test"
-					},
-					"metadata": {
-						"message": {
-							"label": "message",
-							"type": "input",
-							"initialValue": "test",
-							"required": true,
-							"valueType": "text"
-						}
+						"type": "listen_start",
+						"device_id": 1110,
+						"id": "2098388936"
 					}
 				}
 			},
 			{
-				"group": "MessageBuilder",
-				"methodName": "TestMessage-[copy]-1",
+				"group": "Devices",
+				"methodName": "Listen-stop-device",
 				"payload": {
 					"sample": {
-						"message": "test",
-						"details": "Some additional details"
-					},
-					"metadata": {
-						"message": {
-							"id": "message",
-							"label": "message",
-							"type": "input",
-							"initialValue": "test",
-							"required": true,
-							"valueType": "text"
-						},
-						"details": {
-							"id": "details",
-							"label": "details",
-							"type": "select",
-							"data": [
-								"Details message #1",
-								"Another option"
-							],
-							"initialValue": "Some additional details",
-							"required": false,
-							"valueType": "text"
-						}
+						"type": "listen_stop",
+						"device_id": 1110,
+						"id": "2098388936"
 					}
 				}
 			},
 			{
-				"group": "MessageBuilder",
-				"methodName": "TestMessage-[copy]-2",
+				"group": "Stations",
+				"methodName": "Listen-start-station",
 				"payload": {
 					"sample": {
-						"message": "test",
-						"timestamp": 1590577878302
-					},
-					"metadata": {
-						"message": {
-							"id": "message",
-							"label": "message",
-							"type": "input",
-							"initialValue": "test",
-							"required": true,
-							"valueType": "text"
-						},
-						"timestamp": {
-							"id": "timestamp",
-							"label": "time",
-							"type": "input",
-							"initialValue": "__TIMESTAMP__",
-							"required": true,
-							"valueType": "number"
-						}
+						"type": "listen_start_events",
+						"station_id": 2594,
+						"id": "2098388541"
 					}
 				}
 			},
 			{
-				"group": "MessageBuilder",
-				"methodName": "TestMessage-[copy]-3",
+				"group": "Stations",
+				"methodName": "Listen-stop-station",
 				"payload": {
 					"sample": {
-						"message": "test",
-						"timestamp": 1590577878302
-					},
-					"metadata": {
-						"message": {
-							"id": "list",
-							"label": "",
-							"type": "input"
-						},
-						"timestamp": {
-							"id": "timestamp",
-							"label": "time",
-							"type": "input"
-						}
+						"type": "listen_stop_events",
+						"station_id": 2594,
+						"id": "2098388541"
+					}
+				}
+			},
+			{
+				"group": "Devices",
+				"methodName": "Listen-rapid-start-device",
+				"payload": {
+					"sample": {
+						"type": "listen_rapid_start",
+						"device_id": 1110,
+						"id": "2098388542"
+					}
+				}
+			},
+			{
+				"group": "Devices",
+				"methodName": "Listen-rapid-stop-device",
+				"payload": {
+					"sample": {
+						"type": "listen_rapid_stop",
+						"device_id": 1110,
+						"id": "2098388542"
 					}
 				}
 			}
