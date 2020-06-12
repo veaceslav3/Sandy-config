@@ -1,68 +1,34 @@
 {
 	"echoWebSocket": {
 		"provider": "websocket",
+		"url": "wss://echo.websocket.org/",
+		"order": 1,
 		"methods": [
 			{
-				"group": "Group1",
-				"methodName": "___click_HERE___",
+				"group": "Samples",
+				"methodName": "1. Welcome",
 				"payload": {
 					"sample": {
-						"title": "... Welcome to Sandy! ...",
-						"Endpoints": {
-							"Location": "Left side, top area",
-							"Connect": "Click on RED icon to connect to the endpoint",
-							"ContextMenu": "Righ-click on endpoint",
-							"Options": [
-								"Duplicate endpoint",
-								"New endpoint",
-								"Edit endpoint",
-								"Delete endpoint"
-							]
-						},
-						"Methods": {
-							"Location": "Left side, middle area",
-							"ContextMenu": "Righ-click on method",
-							"Options": [
-								"Duplicate method",
-								"New method",
-								"Edit method",
-								"Delete method"
-							]
-						},
-						"MessageBuilder": {
-							"Location": "Left side, bottom area",
-							"Options": [
-								"Fill in input fields",
-								"Select predefined values from dropdown"
-							]
-						}
+						"message": "Welcome to Sandy!"
 					}
 				}
 			},
 			{
-				"group": "Group1",
-				"methodName": "Method2-Scenarios",
+				"group": "Samples",
+				"methodName": "2. Right-click for Context menu",
 				"payload": {
 					"sample": {
-						"Scenario": [
-							"Select the method and 'Send' the message",
-							"Resize any box as you need",
-							"Select second endpoint and see examples for message builder"
+						"e": "subscribe",
+						"channels": [
+							"channel1",
+							"channel2",
+							"channel3"
 						]
 					}
 				}
-			}
-		],
-		"url": "wss://echo.websocket.org/",
-		"order": 1
-	},
-	"[custom]-new-env-1": {
-		"url": "wss://echo.websocket.org/",
-		"provider": "websocket",
-		"order": 8,
-		"methods": [
+			},
 			{
-				"group": "MessageBuilder",
+				"group": "Message Builder",
 				"methodName": "TextBox",
 				"payload": {
 					"sample": {
@@ -80,7 +46,7 @@
 				}
 			},
 			{
-				"group": "MessageBuilder",
+				"group": "Message Builder",
 				"methodName": "Dropdown",
 				"payload": {
 					"sample": {
@@ -113,7 +79,7 @@
 				}
 			},
 			{
-				"group": "MessageBuilder",
+				"group": "Message Builder",
 				"methodName": "Timestamp",
 				"payload": {
 					"sample": {
@@ -141,8 +107,8 @@
 				}
 			},
 			{
-				"group": "MessageBuilder",
-				"methodName": "HiddenTimestamp",
+				"group": "Message Builder",
+				"methodName": "HiddenTimestamp1",
 				"payload": {
 					"sample": {
 						"message": "test",
@@ -170,7 +136,7 @@
 				}
 			},
 			{
-				"group": "MessageBuilder",
+				"group": "Message Builder",
 				"methodName": "Dropdown-hiddenInput",
 				"payload": {
 					"sample": {
@@ -204,7 +170,7 @@
 				}
 			},
 			{
-				"group": "MessageBuilder",
+				"group": "Message Builder",
 				"methodName": "NumberKey-Input",
 				"payload": {
 					"sample": {
@@ -231,41 +197,13 @@
 						}
 					}
 				}
-			},
-			{
-				"group": "TO DO",
-				"methodName": "NumberKey-Select",
-				"payload": {
-					"sample": {
-						"message": "echo",
-						"details": 1
-					},
-					"metadata": {
-						"message": {
-							"id": "message",
-							"valueType": "text",
-							"label": "Message",
-							"type": "input",
-							"initialValue": "echo",
-							"required": true,
-							"hidden": "true"
-						},
-						"details": {
-							"id": "details",
-							"label": "details",
-							"type": "select",
-							"data": [
-								1,
-								2,
-								3
-							],
-							"initialValue": 1,
-							"required": false,
-							"valueType": "number"
-						}
-					}
-				}
 			}
 		]
+	},
+	"echoMessageBuilder": {
+		"url": "wss://--add-server-name",
+		"provider": "websocket",
+		"order": 2,
+		"methods": []
 	}
 }
