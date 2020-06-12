@@ -1,0 +1,477 @@
+{
+	"Stocks": {
+		"url": "wss://socket.polygon.io/stocks",
+		"provider": "websocket",
+		"order": 1,
+		"methods": [
+			{
+				"group": "Stocks cluster",
+				"methodName": "Trades",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "T.MSFT"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"T.AAPL",
+								"T.MSFT",
+								"T.GOOGL"
+							],
+							"initialValue": "T.MSFT",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Stocks cluster",
+				"methodName": "Quotes",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "Q.MSFT"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"Q.AAPL",
+								"Q.MSFT",
+								"Q.GOOGL"
+							],
+							"initialValue": "Q.MSFT",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Stocks cluster",
+				"methodName": "AggregatePerSecond",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "A.MSFT"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"A.AAPL",
+								"A.MSFT",
+								"A.GOOGL"
+							],
+							"initialValue": "A.MSFT",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Stocks cluster",
+				"methodName": "AggregatePerMinute",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "AM.MSFT"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"AM.AAPL",
+								"AM.MSFT",
+								"AM.GOOGL"
+							],
+							"initialValue": "AM.MSFT",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			}
+		]
+	},
+	"Forex": {
+		"url": "wss://socket.polygon.io/forex",
+		"provider": "websocket",
+		"order": 2,
+		"methods": [
+			{
+				"group": "Forex cluster",
+				"methodName": "Currencies",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "C.USD/CNH"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"C.USD/CNH",
+								"C.USD/EUR",
+								"C.AUD/USD"
+							],
+							"initialValue": "C.USD/CNH",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Forex cluster",
+				"methodName": "Currencies-AggregatePerMinute",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "CA.USD/CNH"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"CA.USD/CNH",
+								"CA.USD/EUR",
+								"CA.AUD/USD"
+							],
+							"initialValue": "CA.USD/CNH",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Forex cluster",
+				"methodName": "Bonds",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "BONDS.JP3M-JP"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"BONDS.JP3M-JP",
+								"BONDS.US3M",
+								"BONDS.UK2Y-GB"
+							],
+							"initialValue": "BONDS.JP3M-JP",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Forex cluster",
+				"methodName": "Commodities",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "COMMODITIES.CL1:COM"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"COMMODITIES.CL1:COM",
+								"COMMODITIES.CO1:COM",
+								"COMMODITIES.CP1:COM"
+							],
+							"initialValue": "COMMODITIES.CL1:COM",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Forex cluster",
+				"methodName": "Metals",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "METALS.JG1:COM"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"METALS.JG1:COM",
+								"METALS.GC1:COM",
+								"METALS.XAUUSD:CUR"
+							],
+							"initialValue": "METALS.JG1:COM",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			}
+		]
+	},
+	"Crypto": {
+		"url": "wss://socket.polygon.io/crypto",
+		"provider": "websocket",
+		"order": 2,
+		"methods": [
+			{
+				"group": "Auth",
+				"methodName": "Auth",
+				"payload": {
+					"sample": {
+						"action": "auth",
+						"params": "jR3evlXKpvjuFBsq8x__avHbYeChj1WG0dNTys"
+					}
+				}
+			},
+			{
+				"group": "Crypto cluster",
+				"methodName": "CryptoTrades",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "XT.BTC-USD"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"XT.BTC-USD",
+								"XT.BTC-EUR",
+								"XT.ETH-USD"
+							],
+							"initialValue": "XT.BTC-USD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Crypto cluster",
+				"methodName": "CryptoQuotes",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "XQ.BTC-USD"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"XQ.BTC-USD",
+								"XQ.BTC-EUR",
+								"XQ.ETH-USD"
+							],
+							"initialValue": "XQ.BTC-USD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Crypto cluster",
+				"methodName": "CryptoLevel2Books",
+				"payload": {
+					"sample": {
+						"action": "subscribe",
+						"params": "XL2.BTC-USD"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "select",
+							"data": [
+								"XL2.BTC-USD",
+								"XL2.BTC-EUR",
+								"XL2.ETH-USD"
+							],
+							"initialValue": "XL2.BTC-USD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			}
+		]
+	}
+}
