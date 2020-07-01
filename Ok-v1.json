@@ -1,0 +1,288 @@
+{
+	"echoWebSocket": {
+		"provider": "websocket",
+		"url": "wss://echo.websocket.org/",
+		"order": 1,
+		"methods": [
+			{
+				"group": "Samples",
+				"methodName": "1. Welcome",
+				"payload": {
+					"sample": {
+						"message": "Welcome to Sandy!"
+					}
+				}
+			},
+			{
+				"group": "Samples",
+				"methodName": "2. Right-click for Context menu",
+				"payload": {
+					"sample": {
+						"e": "subscribe",
+						"channels": [
+							"channel1",
+							"channel2",
+							"channel3"
+						]
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "TextBox",
+				"payload": {
+					"sample": {
+						"message": "test"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"type": "input",
+							"label": "Message",
+							"initialValue": "echo message"
+						}
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "Dropdown",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": "Some additional details"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "select",
+							"data": [
+								"Details message #1",
+								"Some additional details",
+								"Another option"
+							],
+							"initialValue": "Some additional details",
+							"required": false,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "Timestamp",
+				"payload": {
+					"sample": {
+						"message": "test",
+						"timestamp": 1590577878302
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"label": "message",
+							"type": "input",
+							"initialValue": "test",
+							"required": true,
+							"valueType": "text"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "time",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number"
+						}
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "HiddenTimestamp1",
+				"payload": {
+					"sample": {
+						"message": "test",
+						"timestamp": 1590577878302
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"label": "message",
+							"type": "input",
+							"initialValue": "test",
+							"required": true,
+							"valueType": "text"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "time",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number",
+							"hidden": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "Dropdown-hiddenInput",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": "Some additional details"
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true,
+							"hidden": "true"
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "select",
+							"data": [
+								"Some additional details",
+								"Details message #1",
+								"Another option"
+							],
+							"initialValue": "Some additional details",
+							"required": false,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Message Builder",
+				"methodName": "NumberKey-Input",
+				"payload": {
+					"sample": {
+						"message": "echo",
+						"details": 1
+					},
+					"metadata": {
+						"message": {
+							"id": "message",
+							"valueType": "text",
+							"label": "Message",
+							"type": "input",
+							"initialValue": "echo",
+							"required": true,
+							"hidden": "true"
+						},
+						"details": {
+							"id": "details",
+							"label": "details",
+							"type": "input",
+							"initialValue": 1,
+							"required": false,
+							"valueType": "number"
+						}
+					}
+				}
+			}
+		]
+	},
+	"[custom]-new-env-1": {
+		"url": "wss://real.okex.com:8443/ws/v3",
+		"provider": "websocket",
+		"order": 3,
+		"methods": [
+			{
+				"group": "Template",
+				"methodName": "template",
+				"payload": {
+					"sample": {
+						"op": "<value>",
+						"args": [
+							"<value1>",
+							"<value2>"
+						]
+					},
+					"metadata": {
+						"op": {
+							"inputType": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe",
+								"login"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "User Authentication",
+				"methodName": "Login",
+				"payload": {
+					"sample": {
+						"op": "login",
+						"args": [
+							"<api_key>",
+							"<passphrase>",
+							"<timestamp>",
+							"<sign>"
+						]
+					},
+					"metadata": {
+						"op": {
+							"inputType": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe",
+								"login"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "User Spot Account",
+				"methodName": "",
+				"payload": {
+					"sample": {
+						"op": "subscribe",
+						"args": [
+							
+						]
+					},
+					"metadata": {
+						"op": {
+							"inputType": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe",
+								"login"
+							]
+						}
+					}
+				}
+			},
+		]
+	},
+	"[custom]-new-env-2": {
+		"url": "wss://real.okex.com:8443/ws/v3?BrokerId=181",
+		"provider": "websocket",
+		"order": 8,
+		"methods": []
+	}
+}
+1234567890123456
+123456
