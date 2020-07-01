@@ -228,9 +228,7 @@
 								"funding",
 								"funding:XBTUSD",
 								"funding:ETHUSD",
-								
-								"funding:BCHUSD",
-								
+								"funding:BCHUSD"
 							],
 							"initialValue": "funding",
 							"required": true,
@@ -311,11 +309,8 @@
 							"data": [
 								"liquidation",
 								"liquidation:XBTUSD",
-								
 								"liquidation:ETHUSD",
-								
-								"liquidation:BCHUSD",
-								
+								"liquidation:BCHUSD"
 							],
 							"initialValue": "liquidation",
 							"required": true,
@@ -356,9 +351,7 @@
 							"data": [
 								"orderBookL2_25",
 								"orderBookL2_25:XBTUSD",
-								
 								"orderBookL2_25:ETHUSD",
-								
 								"orderBookL2_25:BCHUSD"
 							],
 							"initialValue": "orderBookL2_25",
