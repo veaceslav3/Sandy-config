@@ -1,0 +1,96 @@
+{
+	"[custom]-new-env-1": {
+		"url": "wss://ws.blockchain.info/inv",
+		"provider": "websocket",
+		"order": 1,
+		"methods": [
+			{
+				"group": "Group",
+				"methodName": "Unconfirmed",
+				"payload": {
+					"sample": {
+						"op": "unconfirmed_sub"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"unconfirmed_sub",
+								"unconfirmed_unsub"
+							],
+							"initialValue": "unconfirmed_sub",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Group",
+				"methodName": "Address",
+				"payload": {
+					"sample": {
+						"op": "addr_sub",
+						"addr": "1ATFB4A5NwjXrcBpecQTaGFrLjFeRVrDZ5"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"addr_sub",
+								"addr_unsub"
+							],
+							"initialValue": "addr_sub",
+							"required": true,
+							"valueType": "text"
+						},
+						"addr": {
+							"id": "addr",
+							"label": "addr",
+							"type": "input",
+							"initialValue": "bc1qm9t7yp97ypmyw9s0drhryq8zjq8dnyc76avlhx",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Group",
+				"methodName": "Blocks",
+				"payload": {
+					"sample": {
+						"op": "blocks_sub"
+					},
+					"metadata": {
+						"op": {
+							"id": "op",
+							"label": "op",
+							"type": "select",
+							"data": [
+								"blocks_sub",
+								"blocks_unsub"
+							],
+							"initialValue": "blocks_sub",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Group",
+				"methodName": "Ping_block",
+				"payload": {
+					"sample": {
+						"op": "ping_block"
+					}
+				}
+			}
+		]
+	}
+}
