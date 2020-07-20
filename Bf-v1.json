@@ -1,0 +1,326 @@
+{
+	"[custom]-new-env-4": {
+		"url": "wss://api-pub.bitfinex.com/ws/v2",
+		"provider": "websocket",
+		"order": 5,
+		"methods": [
+			{
+				"group": "Public",
+				"methodName": "Ticker",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "ticker",
+						"symbol": "tBTCUSD"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "ticker",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"tBTCUSD",
+								"tETHEUR",
+								"tETHUSD"
+							],
+							"initialValue": "tBTCUSD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Trades",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "trades",
+						"symbol": "tBTCUSD"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "trades",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"tBTCUSD",
+								"tETHEUR",
+								"tETHUSD"
+							],
+							"initialValue": "tBTCUSD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Book",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "book",
+						"symbol": "tBTCUSD"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "book",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"tBTCUSD",
+								"tETHEUR",
+								"tETHUSD"
+							],
+							"initialValue": "tBTCUSD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Raw Books",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "book",
+						"prec": "R0",
+						"symbol": "tBTCUSD"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "book",
+							"required": true,
+							"valueType": "text"
+						},
+						"prec": {
+							"id": "prec",
+							"label": "prec",
+							"type": "input",
+							"hidden": false,
+							"initialValue": "R0",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"tBTCUSD",
+								"tETHEUR",
+								"tETHUSD"
+							],
+							"initialValue": "tBTCUSD",
+							"required": true,
+							"valueType": "text"
+						},
+						"len": {
+							"id": "len",
+							"label": "len",
+							"type": "select",
+							"data": [
+								"1",
+								"25",
+								"100"
+							],
+							"initialValue": "25",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Candles",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "candles",
+						"key": "trade:1m:tBTCUSD"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "candles",
+							"required": true,
+							"valueType": "text"
+						},
+						"key": {
+							"id": "key",
+							"label": "key",
+							"type": "select",
+							"data": [
+								"trade:1m:tBTCUSD",
+								"trade:1m:tETHEUR",
+								"trade:1m:tETHUSD"
+							],
+							"initialValue": "trade:1m:tBTCUSD",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Status",
+				"payload": {
+					"sample": {
+						"event": "subscribe",
+						"channel": "status",
+						"key": "deriv:tBTCF0:USTF0"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"channel": {
+							"id": "channel",
+							"label": "channel",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "status",
+							"required": true,
+							"valueType": "text"
+						},
+						"key": {
+							"id": "key",
+							"label": "key",
+							"type": "select",
+							"data": [
+								"deriv:tBTCF0:USTF0",
+								"deriv:tETHF0:USTF0",
+								"deriv:tBTCDOMF0:USTF0"
+							],
+							"initialValue": "deriv:tBTCF0:USTF0",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "Unsubscribe",
+				"methodName": "Unsubscribe",
+				"payload": {
+					"sample": {
+						"event": "unsubscribe",
+						"chanId": 0
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"label": "event",
+							"type": "input",
+							"hidden": true,
+							"initialValue": "unsubscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"chanId": {
+							"id": "chanId",
+							"label": "chanId",
+							"type": "input",
+							"hidden": false,
+							"initialValue": "",
+							"required": true,
+							"valueType": "number"
+						}
+					}
+				}
+			}
+		]
+	}
+}
