@@ -1,6 +1,6 @@
 {
 	"WeatherFlow": {
-		"url": "wss://ws.weatherflow.com/swd/data?api_key=20c70eae-e62f-4d3b-b3a4-8586e90f3ac8",
+		"url": "wss://ws.weatherflow.com/swd/data?api_key=20c70eae-YOUR-API-KEY",
 		"provider": "websocket",
 		"order": 1,
 		"methods": [
