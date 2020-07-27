@@ -5,6 +5,34 @@
 		"order": 1,
 		"methods": [
 			{
+				"group": "Auth",
+				"methodName": "Auth",
+				"payload": {
+					"sample": {
+						"action": "auth",
+						"params": "ENTER-YOUR-API-KEY"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "input",
+							"initialValue": "auth",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "input",
+							"initialValue": "ENTER-YOUR-API-KEY",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
 				"group": "Stocks cluster",
 				"methodName": "Trades",
 				"payload": {
@@ -159,6 +187,34 @@
 		"provider": "websocket",
 		"order": 2,
 		"methods": [
+			{
+				"group": "Auth",
+				"methodName": "Auth",
+				"payload": {
+					"sample": {
+						"action": "auth",
+						"params": "ENTER-YOUR-API-KEY"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "input",
+							"initialValue": "auth",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "input",
+							"initialValue": "ENTER-YOUR-API-KEY",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
 			{
 				"group": "Forex cluster",
 				"methodName": "Currencies",
@@ -357,7 +413,25 @@
 				"payload": {
 					"sample": {
 						"action": "auth",
-						"params": ""
+						"params": "ENTER-YOUR-API-KEY"
+					},
+					"metadata": {
+						"action": {
+							"id": "action",
+							"valueType": "text",
+							"label": "Action",
+							"type": "input",
+							"initialValue": "auth",
+							"required": true
+						},
+						"params": {
+							"id": "params",
+							"label": "params",
+							"type": "input",
+							"initialValue": "ENTER-YOUR-API-KEY",
+							"required": true,
+							"valueType": "text"
+						}
 					}
 				}
 			},
