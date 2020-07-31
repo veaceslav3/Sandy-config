@@ -168,5 +168,175 @@
 				}
 			}
 		]
+	},
+	"Sandbox-Coinbase": {
+		"url": "wss://ws-feed-public.sandbox.pro.coinbase.com",
+		"provider": "websocket",
+		"order": 2,
+		"methods": [
+			{
+				"group": "Status",
+				"methodName": "status",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"channels": [
+							{
+								"name": "status"
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Heartbeat",
+				"methodName": "BTC-USD subscribe",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"channels": [
+							{
+								"name": "heartbeat",
+								"product_ids": [
+									"BTC-USD"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Heartbeat",
+				"methodName": "BTC-USD unsubscribe",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"channels": [
+							{
+								"name": "heartbeat",
+								"product_ids": [
+									"BTC-USD"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Heartbeat",
+				"methodName": "ETH-EUR subscribe",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"channels": [
+							{
+								"name": "heartbeat",
+								"product_ids": [
+									"ETH-EUR"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Heartbeat",
+				"methodName": "ETH-EUR unsubscribe",
+				"payload": {
+					"sample": {
+						"type": "unsubscribe",
+						"channels": [
+							{
+								"name": "heartbeat",
+								"product_ids": [
+									"ETH-EUR"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Level2",
+				"methodName": "OMG-GBP DAI-USD subscribe",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"product_ids": [
+							"OMG-GBP",
+							"DAI-USD"
+						],
+						"channels": [
+							"level2"
+						]
+					}
+				}
+			},
+			{
+				"group": "Level2",
+				"methodName": "OMG-GBP DAI-USD unsubscribe",
+				"payload": {
+					"sample": {
+						"type": "unsubscribe",
+						"product_ids": [
+							"OMG-GBP",
+							"DAI-USD"
+						],
+						"channels": [
+							"level2"
+						]
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "OMG-GBP subscribe",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"channels": [
+							{
+								"name": "ticker",
+								"product_ids": [
+									"OMG-GBP"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "OMG-GBP unsubscribe",
+				"payload": {
+					"sample": {
+						"type": "unsubscribe",
+						"channels": [
+							{
+								"name": "ticker",
+								"product_ids": [
+									"OMG-GBP"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"group": "Ticker",
+				"methodName": "ETH-GBP subscription2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"product_ids": [
+							"ETH-GBP"
+						],
+						"channels": [
+							"ticker"
+						]
+					}
+				}
+			}
+		]
 	}
 }
