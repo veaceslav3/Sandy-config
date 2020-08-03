@@ -1,0 +1,135 @@
+{
+	"Finnhub": {
+		"url": "wss://ws.finnhub.io?token=bsk08q7rh5rdj1nuoq9g",
+		"provider": "websocket",
+		"order": 4,
+		"methods": [
+			{
+				"group": "WebSocket",
+				"methodName": "Trade",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"symbol": "AAPL"
+					},
+					"metadata": {
+						"type": {
+							"id": "type",
+							"label": "type",
+							"type": "select",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							],
+							"initialValue": "subscribe",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"AAPL",
+								"AMZN",
+								"BINANCE:BTCUSDT",
+								"IC MARKETS:1"
+							],
+							"initialValue": "AAPL",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			},
+			{
+				"group": "WebSocket",
+				"methodName": "Trade-AMZN",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"symbol": "AMZN"
+					}
+				}
+			},
+			{
+				"group": "WebSocket",
+				"methodName": "Trade-Binance:BTCUSD",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"symbol": "BINANCE:BTCUSDT"
+					}
+				}
+			},
+			{
+				"group": "WebSocket",
+				"methodName": "Trade-IC MARKETS:1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"symbol": "IC MARKETS:1"
+					}
+				}
+			},
+			{
+				"group": "News",
+				"methodName": "News-AAPL",
+				"payload": {
+					"sample": {
+						"type": "subscribe-news",
+						"symbol": "AAPL"
+					}
+				}
+			},
+			{
+				"group": "News",
+				"methodName": "News-AMZN",
+				"payload": {
+					"sample": {
+						"type": "subscribe-news",
+						"symbol": "AMZN"
+					}
+				}
+			},
+			{
+				"group": "News",
+				"methodName": "News",
+				"payload": {
+					"sample": {
+						"type": "subscribe-news",
+						"symbol": "AAPL"
+					},
+					"metadata": {
+						"type": {
+							"id": "type",
+							"label": "type",
+							"type": "select",
+							"data": [
+								"subscribe-news",
+								"unsubscribe-news"
+							],
+							"initialValue": "subscribe-news",
+							"required": true,
+							"valueType": "text"
+						},
+						"symbol": {
+							"id": "symbol",
+							"label": "symbol",
+							"type": "select",
+							"data": [
+								"AAPL",
+								"AMZN",
+								"BINANCE:BTCUSDT",
+								"IC MARKETS:1"
+							],
+							"initialValue": "AAPL",
+							"required": true,
+							"valueType": "text"
+						}
+					}
+				}
+			}
+		]
+	}
+}
