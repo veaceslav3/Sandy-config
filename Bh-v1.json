@@ -1,0 +1,55 @@
+{
+	"Bithumb": {
+		"url": "wss://pubwss.bithumb.com/pub/ws",
+		"provider": "websocket",
+		"order": 3,
+		"methods": [
+			{
+				"group": "examples",
+				"methodName": "ticker",
+				"payload": {
+					"sample": {
+						"type": "ticker",
+						"symbols": [
+							"BTC_KRW",
+							"ETH_KRW"
+						],
+						"tickTypes": [
+							"30M",
+							"1H",
+							"12H",
+							"24H",
+							"MID "
+						]
+					}
+				}
+			},
+			{
+				"group": "examples",
+				"methodName": "transactions",
+				"payload": {
+					"sample": {
+						"type": "transaction",
+						"symbols": [
+							"BTC_KRW",
+							"ETH_KRW"
+						]
+					}
+				}
+			},
+			{
+				"group": "examples",
+				"methodName": "orderBookDepth",
+				"payload": {
+					"sample": {
+						"type": "orderbookdepth",
+						"symbols": [
+							"BTC_KRW",
+							"ETH_KRW"
+						]
+					}
+				}
+			}
+		]
+	}
+}
