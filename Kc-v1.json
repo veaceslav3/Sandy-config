@@ -1,0 +1,394 @@
+{
+	"KuCoin": {
+		"url": "wss://push-websocket-sandbox.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJ5OWDGzf9S6nL4yO6R1Vfj8Ddy-yJTELRtiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L-aBuoyw6V6BNHnRYETTzFs=.ePJ2yclXFI4h2vO2p06beA==",
+		"provider": "websocket",
+		"order": 4,
+		"methods": [
+			{
+				"group": "Public",
+				"methodName": "Ticker",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/market/ticker:BTC-USDT",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/market/ticker:BTC-USDT",
+							"data": [
+								"/market/ticker:BTC-USDT",
+								"/market/ticker:ETH-USDT",
+								"/market/ticker:ETH-BTC",
+								"/market/ticker:KCS-USDT",
+								"/market/ticker:all"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Snapshot-Symbol",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/market/snapshot:BTC-USDT",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/market/snapshot:BTC-USDT",
+							"data": [
+								"/market/snapshot:BTC-USDT",
+								"/market/snapshot:ETH-USDT",
+								"/market/snapshot:ETH-BTC",
+								"/market/snapshot:KCS-USDT"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Snapshot-Market",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/market/snapshot:BTC",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/market/snapshot:BTC",
+							"data": [
+								"/market/snapshot:BTC",
+								"/market/snapshot:KCS",
+								"/market/snapshot:USDS",
+								"/market/snapshot:ALTS"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Level2",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/market/label2:BTC-USDT",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/market/label2:BTC-USDT",
+							"data": [
+								"/market/label2:BTC-USDT",
+								"/market/label2:ETH-USDT",
+								"/market/label2:ETH-BTC",
+								"/market/label2:KCS-USDT"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Level2 Depth5",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/spotMarket/level2Depth5:BTC-USDT",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/spotMarket/level2Depth5:BTC-USDT",
+							"data": [
+								"/spotMarket/level2Depth5:BTC-USDT",
+								"/spotMarket/level2Depth5:ETH-USDT",
+								"/spotMarket/level2Depth5:ETH-BTC",
+								"/spotMarket/level2Depth5:KCS-USDT"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Level2 Depth50",
+				"payload": {
+					"sample": {
+						"id": 1545910660739,
+						"type": "subscribe",
+						"topic": "/spotMarket/level2Depth50:BTC-USDT",
+						"response": true
+					},
+					"metadata": {
+						"id": {
+							"id": "id",
+							"valueType": "number",
+							"type": "input",
+							"label": "id",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						},
+						"type": {
+							"id": "type",
+							"valueType": "text",
+							"type": "select",
+							"label": "type",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "subscribe",
+							"data": [
+								"subscribe",
+								"unsubscribe"
+							]
+						},
+						"topic": {
+							"id": "topic",
+							"valueType": "text",
+							"type": "select",
+							"label": "topic",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "/spotMarket/level2Depth50:BTC-USDT",
+							"data": [
+								"/spotMarket/level2Depth50:BTC-USDT",
+								"/spotMarket/level2Depth50:ETH-USDT",
+								"/spotMarket/level2Depth50:ETH-BTC",
+								"/spotMarket/level2Depth50:KCS-USDT"
+							]
+						},
+						"response": {
+							"id": "response",
+							"valueType": "text",
+							"type": "input",
+							"label": "response",
+							"required": true,
+							"hidden": true,
+							"readonly": true,
+							"initialValue": true
+						}
+					}
+				}
+			}
+		]
+	}
+}
