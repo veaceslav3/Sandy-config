@@ -1,0 +1,342 @@
+{
+	"Bibox": {
+		"url": "wss://push.bibox.com/",
+		"provider": "websocket",
+		"order": 1,
+		"methods": [
+			{
+				"group": "Public",
+				"methodName": "Kline-1min",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_kline_1min"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_kline_1min",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_kline_1min",
+								"bibox_sub_spot_BIX_ETH_kline_1min",
+								"bibox_sub_spot_BTC_USDT_kline_1min",
+								"bibox_sub_spot_ETH_USDT_kline_1min"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Kline-5min",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_kline_5min"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_kline_5min",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_kline_5min",
+								"bibox_sub_spot_BIX_ETH_kline_5min",
+								"bibox_sub_spot_BTC_USDT_kline_5min",
+								"bibox_sub_spot_ETH_USDT_kline_5min"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Kline-day",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_kline_day"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_kline_day",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_kline_day",
+								"bibox_sub_spot_BIX_ETH_kline_day",
+								"bibox_sub_spot_BTC_USDT_kline_day",
+								"bibox_sub_spot_ETH_USDT_kline_day"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "All market",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_ALL_ALL_market"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_ALL_ALL_market",
+							"data": [
+								"bibox_sub_spot_ALL_ALL_market"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Depth",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_depth"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_depth",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_depth",
+								"bibox_sub_spot_BIX_ETH_depth",
+								"bibox_sub_spot_BTC_USDT_depth",
+								"bibox_sub_spot_ETH_USDT_depth"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Deals",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_deals"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_deals",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_deals",
+								"bibox_sub_spot_BIX_ETH_deals",
+								"bibox_sub_spot_BTC_USDT_deals",
+								"bibox_sub_spot_ETH_USDT_deals"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Ticker",
+				"payload": {
+					"sample": {
+						"event": "addChannel",
+						"channel": "bibox_sub_spot_BIX_BTC_ticker"
+					},
+					"metadata": {
+						"event": {
+							"id": "event",
+							"valueType": "text",
+							"type": "select",
+							"label": "event",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "addChannel",
+							"data": [
+								"addChannel",
+								"removeChannel"
+							]
+						},
+						"channel": {
+							"id": "channel",
+							"valueType": "text",
+							"type": "select",
+							"label": "channel",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "bibox_sub_spot_BIX_BTC_ticker",
+							"data": [
+								"bibox_sub_spot_BIX_BTC_ticker",
+								"bibox_sub_spot_BIX_ETH_ticker",
+								"bibox_sub_spot_BTC_USDT_ticker",
+								"bibox_sub_spot_ETH_USDT_ticker"
+							]
+						}
+					}
+				}
+			},
+			{
+				"group": "PING",
+				"methodName": "PING",
+				"payload": {
+					"sample": {
+						"ping": 1597077728947
+					},
+					"metadata": {
+						"ping": {
+							"id": "ping",
+							"valueType": "number",
+							"type": "input",
+							"label": "ping",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": "__TIMESTAMP__"
+						}
+					}
+				}
+			},
+			{
+				"group": "PING",
+				"methodName": "PONG",
+				"payload": {
+					"sample": {
+						"pong": 1597077428
+					},
+					"metadata": {
+						"pong": {
+							"id": "pong",
+							"valueType": "number",
+							"type": "input",
+							"label": "pong",
+							"required": true,
+							"hidden": false,
+							"readonly": false,
+							"initialValue": ""
+						}
+					}
+				}
+			}
+		]
+	}
+}
