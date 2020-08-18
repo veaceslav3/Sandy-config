@@ -1,0 +1,228 @@
+{
+	"Gate.io-Futures": {
+		"url": "wss://fx-ws-testnet.gateio.ws/v4/ws/btc",
+		"provider": "websocket",
+		"order": 2,
+		"methods": [
+			{
+				"group": "Public",
+				"methodName": "Ticker",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.tickers",
+						"event": "subscribe",
+						"payload": [
+							"BTC_USD"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Trades",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.trades",
+						"event": "subscribe",
+						"payload": [
+							"BTC_USD"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "OrderBook",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.order_book",
+						"event": "subscribe",
+						"payload": [
+							"BTC_USD",
+							"20",
+							"0"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Candlesticks",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.candlesticks",
+						"event": "subscribe",
+						"payload": [
+							"10s",
+							"BTC_USD"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Candlesticks-index",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.candlesticks",
+						"event": "subscribe",
+						"payload": [
+							"10s",
+							"index_BTC_USD"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Candlesticks-mark",
+				"payload": {
+					"sample": {
+						"time": 123456,
+						"channel": "futures.candlesticks",
+						"event": "subscribe",
+						"payload": [
+							"10s",
+							"mark_BTC_USD"
+						]
+					}
+				}
+			}
+		]
+	},
+	"Gate.io-Spot": {
+		"url": "wss://ws.gate.io/v3/",
+		"provider": "websocket",
+		"order": 3,
+		"methods": [
+			{
+				"group": "Public",
+				"methodName": "Ticker-query",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "ticker.query",
+						"params": [
+							"EOS_USDT",
+							86400
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Ticker-subscription",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "ticker.subscribe",
+						"params": [
+							"BOT_USDT"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Trade-query",
+				"payload": {
+					"sample": {
+						"id": 12309,
+						"method": "trades.query",
+						"params": [
+							"EOS_USDT",
+							2,
+							7177813
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Trade-subscribe",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "trades.subscribe",
+						"params": [
+							"ETH_USDT",
+							"BTC_USDT"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Depth-query",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "depth.query",
+						"params": [
+							"EOS_USTD",
+							5,
+							"0.0001"
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Depth-subscribe",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "depth.subscribe",
+						"params": [
+							[
+								"BTC_USDT",
+								5,
+								"0.01"
+							],
+							[
+								"ETH_USDT",
+								5,
+								"0"
+							]
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Kline-query",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "kline.query",
+						"params": [
+							"BTC_USDT",
+							1,
+							1516951219,
+							1800
+						]
+					}
+				}
+			},
+			{
+				"group": "Public",
+				"methodName": "Kline-subscribe",
+				"payload": {
+					"sample": {
+						"id": 12312,
+						"method": "kline.subscribe",
+						"params": [
+							"BTC_USDT",
+							1800
+						]
+					}
+				}
+			}
+		]
+	}
+}
